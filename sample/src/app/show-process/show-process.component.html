@@ -1,0 +1,27 @@
+<div class="container-fluid mt-4 content">
+
+
+  <h3 class="display-4">List Of Process</h3>
+  <table class="table table-hover">
+    <thead>
+      <tr >
+        <th scope="col">ID</th>
+        <th scope="col">ProcessName</th>
+        <th scope="col">Process Description</th>
+        <th scope="col">Created By</th>
+        <th scope="col">Created On</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="cursor: pointer;"*ngFor="let customer of proces" (click)="onUpdate(customer)">
+        <td>{{customer.processId}}</td>
+        <td>{{customer.processName}}</td>
+        <td>{{customer.processDescription}}</td>
+        <td>{{customer.createdBy}}</td>
+        <td>{{customer.createdOn  | date: 'dd/MM/yyyy'}}</td>
+     </tr>
+      
+    </tbody>
+  </table>
+  
+</div>

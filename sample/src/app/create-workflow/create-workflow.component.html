@@ -1,0 +1,32 @@
+<div class="container content">
+ 
+  <h1 class="display-4">Create workflow</h1>
+  <div class="row">
+  <div class=" col modeler">
+      
+    <div  id="canvas" #canvas></div>
+  </div>
+  <div class="col properties-panel" id="properties"></div>
+</div>
+<form  [formGroup]="myform">
+<div class="row">
+
+<div class="row" style="margin-left: 8px;">
+  <label for="name" >Select Process </label>
+  <select  class="form-control" style="margin-bottom: 10px;width: 250px; margin-left: 10px;" formControlName="procname">
+      <option value="0">--All--</option>
+      <option *ngFor="let summary of proces" value={{summary.processId}}>
+          {{summary.processName}}
+      </option>
+  </select>
+  <label for="name" style="margin-left: 15px;" >Enter version </label>
+<input type="text"  style="
+height: 38px;margin-left: 10px;    width: 8em;" formControlName="version" class="form-control reset">
+</div>
+<div class="col">
+
+</div>
+</div>
+  <button class='btn btn-lg btn-primary ' (click)="save()">Save </button>
+  </form>
+</div>

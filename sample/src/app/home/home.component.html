@@ -1,0 +1,80 @@
+<div class="container-fluid mt-4 content">
+  <h3 class="display-4">Metrics</h3>
+  <app-metrics></app-metrics>
+  <h3 class="display-4">Process instances</h3>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">State</th>
+        <th scope="col">Id</th>
+        <th scope="col">Start time</th>
+        <th scope="col">End time</th>
+        <th scope="col">Workflow</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row" class='text-success'>Completed</th>
+        <td>1</td>
+        <td>2019-27-08T11:04:55</td>
+        <td>2019-27-08T11:04:56</td>
+        <td>Insurance quote</td>
+      </tr>
+      <tr>
+        <th scope="row" class='text-success'>Completed</th>
+        <td>2</td>
+        <td>2019-27-08T11:04:56</td>
+        <td>2019-27-08T11:04:57</td>
+        <td>Insurance underwriting</td>
+      </tr>
+      <tr>
+        <th scope="row" class='text-danger'>Failed</th>
+        <td>2</td>
+        <td>2019-27-08T11:04:56</td>
+        <td>2019-27-08T11:04:57</td>
+        <td>Adjuster allocation</td>
+      </tr>
+      <tr>
+        <th scope="row" class='text-warning'>In Progress</th>
+        <td>2</td>
+        <td>2019-27-08T11:04:56</td>
+        <td>-</td>
+        <td>Claim notification</td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+  <h3 class="display-4">Deployed workflows</h3>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Created By</th>
+        <th scope="col">Created On</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        
+        <td>Insurance quote</td>
+        <td>Workflow for insurance quote</td>
+        <td>Sample User</td>
+        <td>2019-27-08T11:04:56</td>
+      </tr>
+      <tr>
+        
+        <td>Insurance underwriting</td>
+        <td>Workflow for insurance underwriting</td>
+        <td>Sample User</td>
+        <td>2019-27-08T11:04:56</td>
+      </tr>
+      
+      
+    </tbody>
+  </table>
+
+  <span class="mt-4 mb-4"></span>
+  
+</div>

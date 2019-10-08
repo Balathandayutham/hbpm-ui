@@ -1,0 +1,120 @@
+
+<!--  
+<section class="view intro-2">
+  <div class="layer">
+
+</div>
+</section>
+
+<div >
+<div class="mask rgba-gradient container-fluid">
+  <form class="form-signin" [formGroup]="loginForm" (ngSubmit)="doLogin()" >
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        <label for="inputEmail" class="sr-only">User Id</label>
+        <input type="text" formControlName="userId" id="userId" class="form-control" placeholder="user id"  autofocus>
+        
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" formControlName="password" id="password" class="form-control" placeholder="password" >
+        
+        <button class="btn btn-lg btn-primary btn-block" [disabled]="!loginForm.valid" type="submit">Sign in</button>
+  </form>
+</div> -->
+<div class="bg-img">
+    <div class="layer">
+      
+  <!-- <form action="/action_page.php" class="container">
+   
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+  </form> -->
+ 
+  <div  class=" container2"> <h1 style="
+    font-family: sans-serif; color: #10188a;
+">HBPM | Hybrid Business Process Management Application</h1></div>
+  <div  class=" container3"> <h1 style="
+    font-family: serif;
+    font-style: italic;
+    font-size: 2em;
+    color: #0b4be2;
+">- "Extendable, Scalable & Light weight"</h1></div>
+  <div class=" container">
+   
+  <form [formGroup]="loginForm" (ngSubmit)="doLogin()" style="
+  background-color: #f8f9fa;
+  width: 300p;
+  padding-left: 10px;
+  width: 300px;
+  height: 320px;
+  padding-right: 10px;
+  ">
+      <h1 style="
+      font-style: italic;
+      font-family: serif;
+  ">Login</h1>
+      <div class="form-label-group">
+        <input type="text" formControlName="userId" id="userId" class="form-control" placeholder="user id"  autofocus>
+     
+      </div>
+
+      <div class="form-label-group">
+        <input type="password" formControlName="password" id="password" class="form-control" placeholder="password">
+        
+      </div>
+
+      <div class="custom-control custom-checkbox mb-3">
+        <input type="checkbox" class="custom-control-input" id="customCheck1">
+        <label class="custom-control-label" for="customCheck1">Remember password</label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block "  [disabled]="!loginForm.valid" type="submit">Sign in</button>
+      <div class="text-center">
+        <a class="small" href="#" style="
+        margin-right: 172px;
+    ">Forgot password?</a></div>
+    </form>
+  </div>
+  </div>
+</div>
+
+<!-- <div class="container-fluid">
+  <div class="row no-gutter">
+     
+    <div class="d-none d-md-flex col-md-9 bg-image "></div>
+     
+    <div class="col-md-3">
+      <div class="login d-flex align-items-center py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9">
+                <img src="../../assets/logo.jpg" style="width: 350px">
+              <h3 class="login-heading mb-4">Hybrid-BPM</h3>
+              <form class="form-signin" [formGroup]="loginForm" (ngSubmit)="doLogin()">
+                <div class="form-label-group">
+                  <input type="text" formControlName="userId" id="userId" class="form-control" placeholder="user id"  autofocus>
+               
+                </div>
+
+                <div class="form-label-group">
+                  <input type="password" formControlName="password" id="password" class="form-control" placeholder="password">
+                  
+                </div>
+
+                <div class="custom-control custom-checkbox mb-3">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <label class="custom-control-label" for="customCheck1">Remember password</label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block "  [disabled]="!loginForm.valid" type="submit">Sign in</button>
+                <div class="text-center">
+                  <a class="small" href="#">Forgot password?</a></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->

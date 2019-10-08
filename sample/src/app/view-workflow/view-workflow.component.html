@@ -1,0 +1,100 @@
+<style>
+.numberCircle {
+  border-radius: 50%;
+  width: 36px;  height: 36px;  padding: 8px;  background: rgb(255, 0, 0);  color: rgb(255, 255, 255);  text-align: center;  font: 32px Arial, sans-serif;
+}
+</style>
+<div class="container content">
+
+    <h1 class="display-4">View workflow</h1>
+
+    <div #ref class="diagram-container"></div>
+
+    <h3 >Failed Process instances</h3>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">State</th>
+          <th scope="col">Id</th>
+          <th scope="col">Start time</th>
+          <th scope="col">End time</th>
+          <th scope="col">Workflow</th>
+          <th scope="col">Select All   
+            <input type="checkbox"  name="is_all" (change)="isSelected = !isSelected">
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Failed</th>
+          <td>1</td>
+          <td>2019-27-08T11:04:55</td>
+          <td>2019-27-08T11:04:56</td>
+          <td>Insurance quote</td>
+          <td>
+            <label class="check ">
+              <input type="checkbox"  name="is_name"  [checked]="isSelected">
+            <span class="checkmark"></span>
+          </label>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Failed</th>
+          <td>2</td>
+          <td>2019-27-08T11:04:56</td>
+          <td>2019-27-08T11:04:57</td>
+          <td>Insurance underwriting</td>
+          <td>
+            <label class="check ">
+              <input type="checkbox"  name="is_name" [checked]="isSelected">
+            <span class="checkmark"></span>
+          </label>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Failed</th>
+          <td>3</td>
+          <td>2019-27-08T11:04:56</td>
+          <td>2019-27-08T11:04:57</td>
+          <td>Adjuster allocation</td>
+          <td>
+            <label class="check ">
+              <input type="checkbox"  name="is_name" [checked]="isSelected">
+            <span class="checkmark"></span>
+          </label>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Failed</th>
+          <td>4</td>
+          <td>2019-27-08T11:04:56</td>
+          <td>2019-27-08T11:04:57</td>
+          <td>Claim notification</td>
+          <td>
+            <label class="check ">
+              <input type="checkbox"  name="is_name" [checked]="isSelected">
+            <span class="checkmark"></span>
+          </label>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Failed</th>
+          <td>5</td>
+          <td>2019-27-08T11:04:56</td>
+          <td>2019-27-08T11:04:57</td>
+          <td>Claim notification</td>
+          <td>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <label class="check ">
+                <input type="checkbox"  name="is_name" [checked]="isSelected">
+              <span class="checkmark"></span>
+            </label>
+             
+            </div>
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+    <button class='btn btn-lg btn-primary ' >Retry </button>
+</div>

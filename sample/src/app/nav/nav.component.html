@@ -1,0 +1,63 @@
+
+  
+<div *ngIf="isAuthenticated()" class="sidebar">
+  <!-- <a class="navbar-brand" href="#">BPMN MO</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          Workflow
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/create-events">Create Events</a>
+            <a class="dropdown-item" href="/create-states">Create States</a>
+          <a class="dropdown-item" href="/define-workflow">Define workflow</a>
+          
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Sample Menu</a>
+      </li>
+    </ul>
+    
+  </div> -->
+ 
+  <a  routerLink="/home">Home <span class="sr-only">(current)</span></a>
+  
+  <a routerLink="/define-workflow">Create Process</a>
+  <a routerLink="/create-events">Create Events</a>
+  <a routerLink="/create-states">Create States</a>
+  <a routerLink="/create-workflow">Create workflow</a>
+  <!-- <a  href="/view-workflow">View workflow</a> -->
+  
+</div>
+<div  class=" mt-4 content" *ngIf="isAuthenticated()"  style="background-color:#d4d2d2;height:73px">
+  <h4><img src="assets/logo2.png"  style="width:91px"> HBPM</h4>
+
+  <h6>Hybrid Business Process Management</h6> 
+  
+  <img style="
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 17px;
+  width: 46px;
+  
+"  src="assets/logout.jpg" >
+
+   <!-- <i  style="
+   position: absolute;
+   right: 20px;
+   top: 17px;
+   width: 78px;
+   height: 43px;
+   background-color: #adb5bd;
+ "  class="fa fa-sign-out" aria-hidden="true"></i> -->
+</div>

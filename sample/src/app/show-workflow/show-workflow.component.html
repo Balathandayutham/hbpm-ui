@@ -1,0 +1,25 @@
+<div class="container-fluid mt-4 content">
+
+
+  <h3 class="display-4">List Of Workflows</h3>
+  <table class="table table-hover">
+    <thead>
+      <tr >
+        <th scope="col">ID</th>
+        <th scope="col">Process ID</th>
+        <th scope="col">Version</th>
+    
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="cursor: pointer;" *ngFor="let customer of proces" (click)="onUpdate(customer)">
+        <td>{{customer.id}}</td>
+        <td>{{customer.processId}}</td>
+        <td>{{customer.version}}</td>
+      
+     </tr>
+      
+    </tbody>
+  </table>
+  
+</div>

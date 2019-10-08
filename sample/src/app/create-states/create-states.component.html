@@ -1,0 +1,53 @@
+<div class="container mt-4 content">
+  
+    <h1 class="display-4">Create Sates</h1>
+    <form  [formGroup]="myform" (ngSubmit)="OnSubmit()">
+        <label for="name" class="col-sm-2 col-form-label">Select Process</label>
+        <div class="col-sm-6">
+         
+          <select  class="form-control" (change)="onChangeEvent($event)" style="margin-bottom: 10px;width: 300px;" formControlName="procname">
+            <option value="0">--All--</option>
+            <option *ngFor="let summary of proces" value={{summary.processId}}>
+                {{summary.processName}}
+            </option>
+        </select>
+ 
+        </div>
+  
+      <div class="col-sm-12 table-responsive" formArrayName="itemRows">
+          
+        <table class="table"  style="width: 30px;" >
+          <thead>
+            <tr>
+              
+              <th style="white-space: nowrap;padding-right: 2em;float:center">States </th>
+              <th style="white-space: nowrap;padding-right: 2em;float:center">Descripition </th>
+             
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let itemrow of myform.controls.itemRows['controls']; let i=index"  [formGroupName]="i">
+  
+             
+               <td> <input type="text" id="learn{{i}}" style="
+                height: 45px;    width: 18em;" formControlName="stateName" class="form-control reset"></td>
+              <td> <input type="text" formControlName="stateDescription"style="
+                height: 45px;    width: 18em;" class="form-control reset"></td>
+             
+              <td> <button *ngIf="myform.controls.itemRows.controls.length > 1" (click)="deleteRow(i)" class="btn btn-danger"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr><td> <button type="button" (click)="addNewRow()" class="btn btn-primary"><i style="width:10px"class="fa fa-plus-circle" aria-hidden="true"></i></button></td></tr>
+          </tfoot>
+        </table>
+        <button class="btn btn-sm btn-secondary "  type="button" (click) = "reset()">Reset</button>
+      <button class="ml-4 btn btn-sm btn-primary "  type="submit">Submit</button>
+    </div>
+  
+  
+  
+    </form>
+  </div>
+  
+  
