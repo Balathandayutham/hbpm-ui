@@ -1,0 +1,2411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="f39696c2-dabd-4c11-bb42-ac2557b2014c" activeEnvironment="Default" name="Prod Service" soapui-version="5.2.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="899b59c4-7881-4ecf-8046-8f4d05a0ff18" wsaVersion="NONE" name="searchUpsertDelPartySOAP" type="wsdl" bindingName="{http://mdm.mcafee.com/searchUpsertDelParty/}searchUpsertDelPartySOAP" soapVersion="1_1" anonymous="optional" definition="http://dnvappmdm1:7007/MDMWebService/searchUpsertDelPartySOAP?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://dnvappmdm1:7007/MDMWebService/searchUpsertDelPartySOAP?WSDL"><con:part><con:url>http://dnvappmdm1:7007/MDMWebService/searchUpsertDelPartySOAP?WSDL</con:url><con:content><![CDATA[<!--Published by JAX-WS RI (http://jax-ws.java.net). RI's version is JAX-WS RI 2.2.10-b140319.1121 svn-revision#7b34660d6bc70e587e8ec81a17e4d76af68816a6.-->
+<wsdl:definitions name="searchUpsertDelParty" targetNamespace="http://mdm.mcafee.com/searchUpsertDelParty/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://mdm.mcafee.com/searchUpsertDelParty/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://mdm.mcafee.com/searchUpsertDelParty/">
+      <xsd:complexType name="PartyGroupType">
+        <xsd:sequence>
+          <xsd:element name="ROWID_OBJECT" type="xsd:string"/>
+          <xsd:element name="CREATE_DATE" type="xsd:string"/>
+          <xsd:element name="UPDATED_BY" type="xsd:string"/>
+          <xsd:element name="LAST_UPDATE_DATE" type="xsd:string"/>
+          <xsd:element name="BO_CLASS_CODE" type="xsd:string"/>
+          <xsd:element name="PARTY_NAME" type="xsd:string"/>
+          <xsd:element name="ENTITY_TYPE_DESC" type="xsd:string"/>
+          <xsd:element name="GLBL_PAR_NAME" type="xsd:string"/>
+          <xsd:element name="GLBL_PAR_NUMBER" type="xsd:string"/>
+          <xsd:element name="GLBL_PAR_METHOD" type="xsd:string"/>
+          <xsd:element name="GLBL_PAR_NAME_OVRIDE" type="xsd:string"/>
+          <xsd:element name="GLBL_PAR_NAME_OVRIDE_METH" type="xsd:string"/>
+          <xsd:element name="UCN" type="xsd:string"/>
+          <xsd:element name="GLB_EMP_CNT_OVERRIDE" type="xsd:string"/>
+          <xsd:element name="GLB_EMP_CNT_OVERIDE_METH" type="xsd:string"/>
+          <xsd:element name="G2K_FLG" type="xsd:string"/>
+          <xsd:element name="GLB_VERTICAL" type="xsd:string"/>
+          <xsd:element name="GLB_VERTICAL_OVERRIDE" type="xsd:string"/>
+          <xsd:element name="GLB_VERTICAL_OVERRIDE_METH" type="xsd:string"/>
+          <xsd:element name="GLB_SALES_REVNU" type="xsd:string"/>
+          <xsd:element name="GLB_SALES_REVNU_OVRID" type="xsd:string"/>
+          <xsd:element name="GLB_SALES_REVNU_OVRID_METH" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartyGroupXrefType">
+        <xsd:sequence>
+          <xsd:element name="SRC_SYSTEM" type="xsd:string"/>
+          <xsd:element name="SRC_PKEY" type="xsd:string"/>
+          <xsd:element name="LAST_UPDATE_DATE" type="xsd:string"/>
+          <xsd:element name="UPDATED_BY" type="xsd:string"/>
+          <xsd:element name="PARTY_GROUP_NAME" type="xsd:string"></xsd:element>
+          <xsd:element name="ENTITY_TYPE" type="xsd:string"/>
+          <xsd:element name="ENTITY_TYPE_DESC" type="xsd:string"/>
+          <xsd:element name="LEVEL_1" type="xsd:string"/>
+          <xsd:element name="GLBL_PAR_NAME" type="xsd:string"/>
+          <xsd:element name="GLBL_PAR_NUMBER" type="xsd:string"/>
+          <xsd:element name="GLBL_PAR_METHOD" type="xsd:string"/>
+          <xsd:element name="GLBL_PAR_NAME_OVRIDE" type="xsd:string"/>
+          <xsd:element name="GLBL_PAR_NAME_OVRIDE_METH" type="xsd:string"/>
+          <xsd:element name="UCN" type="xsd:string"/>
+          <xsd:element name="GLB_EMP_CNT_OVERRIDE" type="xsd:string"/>
+          <xsd:element name="GLB_EMP_CNT_OVERIDE_METH" type="xsd:string"/>
+          <xsd:element name="G2K_FLG" type="xsd:string"/>
+          <xsd:element name="GLB_VERTICAL" type="xsd:string"/>
+          <xsd:element name="GLB_VERTICAL_OVERRIDE" type="xsd:string"/>
+          <xsd:element name="GLB_VERTICAL_OVERRIDE_METH" type="xsd:string"/>
+          <xsd:element name="GLB_SALES_REVNU" type="xsd:string"/>
+          <xsd:element name="GLB_SALES_REVNU_OVRID" type="xsd:string"/>
+          <xsd:element name="GLB_SALES_REVNU_OVRID_METH" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="HierarchyProfile">
+        <xsd:sequence>
+          <xsd:element name="HierarchyLevel" type="xsd:string"/>
+          <xsd:element name="Name" type="xsd:string"/>
+          <xsd:element name="UCN" type="xsd:string"/>
+          <xsd:element name="Country" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="GenericUpsertResponse">
+        <xsd:sequence>
+          <xsd:element name="SRC_PKEY" type="xsd:string"/>
+          <xsd:element name="ROWID_OBJECT" type="xsd:string"/>
+          <xsd:element name="Status" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+          <xsd:element name="WarningMsg" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+          <xsd:element name="ErrorMsg" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartyType">
+        <xsd:sequence>
+          <xsd:element name="ErrorMsg" type="xsd:string"/>
+          <xsd:element name="ROWID_OBJECT" type="xsd:string"/>
+          <xsd:element name="BO_CLASS_CODE" type="xsd:string"/>
+          <xsd:element name="PARTY_TYPE" type="xsd:string"/>
+          <xsd:element name="PARTY_NAME" type="xsd:string"/>
+          <xsd:element name="GEO" type="xsd:string"/>
+          <xsd:element name="REGION" type="xsd:string"/>
+          <xsd:element name="STATUS_CD" type="xsd:string"/>
+          <xsd:element name="VAT_REG_NBR" type="xsd:string"/>
+          <xsd:element name="TAX_JURSDCTN_CD" type="xsd:string"/>
+          <xsd:element name="SALES_BLOCK_CD" type="xsd:string"/>
+          <xsd:element name="UCN" type="xsd:string"/>
+          <xsd:element name="LEGACY_UCN" type="xsd:string"/>
+          <xsd:element name="ENGLISH_NAME" type="xsd:string"/>
+          <xsd:element name="SIP_POP" type="xsd:string"/>
+          <xsd:element name="MSG_TRKN_ID" type="xsd:string"/>
+          <xsd:element name="SRC_UPDT_BY" type="xsd:string"/>
+          <xsd:element name="PHYSICAL_GEO" type="xsd:string"/>
+          <xsd:element name="PHYSICAL_REGION" type="xsd:string"/>
+          <xsd:element name="UPDATE_DATE" type="xsd:string"/>
+          <xsd:element name="XREF" type="tns:XREFType" maxOccurs="unbounded" minOccurs="1"/>
+          <xsd:element name="Account" type="tns:AccountType" maxOccurs="unbounded" minOccurs="0"/>
+          <xsd:element name="Address" type="tns:AddressType" maxOccurs="unbounded" minOccurs="0"/>
+          <xsd:element name="Communication" type="tns:CommunicationType" maxOccurs="unbounded" minOccurs="0"/>
+          <xsd:element name="Classification" type="tns:ClassificationType" maxOccurs="unbounded" minOccurs="0"/>
+          <xsd:element name="PartyOrgExt" type="tns:PartyOrgExtType" maxOccurs="unbounded" minOccurs="0"/>
+          <xsd:element name="PartyPersonExt" type="tns:PartyPersonExtType" maxOccurs="unbounded" minOccurs="0"/>
+          <!--Removed for M4M-->
+          <!--<xsd:element name="PartyRelationship"
+					type="tns:PartyAccountRelationshipType" maxOccurs="unbounded"
+					minOccurs="0" />-->
+          <!--Removed for M4M-->
+          <!--Added M4M Types-->
+          <xsd:element name="PartyPerson" type="tns:PartyPersonType" maxOccurs="unbounded" minOccurs="0"/>
+          <xsd:element name="PartyRel" type="tns:PartyRelationshipType" maxOccurs="1" minOccurs="0"/>
+          <!--End M4M Types-->
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AccountType">
+        <xsd:sequence>
+          <xsd:element name="ROWID_ACCOUNT" type="xsd:string"/>
+          <xsd:element name="ACCT_NAME" type="xsd:string"/>
+          <xsd:element name="ALIAS_NAME" type="xsd:string"/>
+          <xsd:element name="ACCOUNT_REGION" type="xsd:string"/>
+          <xsd:element name="ACCOUNT_GEO" type="xsd:string"/>
+          <xsd:element name="MARKET" type="xsd:string"/>
+          <xsd:element name="ACCT_STATUS" type="xsd:string"/>
+          <xsd:element name="ACCT_TYPE" type="xsd:string"/>
+          <xsd:element name="CUST_GROUP" type="xsd:string"/>
+          <xsd:element name="PRICE_GROUP" type="xsd:string"/>
+          <xsd:element name="COMPANY_CD" type="xsd:string"/>
+          <xsd:element name="ACCOUNT_VAT_REG_NBR" type="xsd:string"/>
+          <xsd:element name="TAX_TYPE" type="xsd:string"/>
+          <xsd:element name="ACCOUNT_TAX_JURSDCTN_CD" type="xsd:string"/>
+          <xsd:element name="BILL_BLOCK_CD" type="xsd:string"/>
+          <xsd:element name="ORDR_BLOCK_CD" type="xsd:string"/>
+          <xsd:element name="DLVRY_BLOCK_CD" type="xsd:string"/>
+          <xsd:element name="POST_BLOCK_CD" type="xsd:string"/>
+          <xsd:element name="SALE_BLOCK_CD" type="xsd:string"/>
+          <xsd:element name="CHANNEL_ID" type="xsd:string"/>
+          <xsd:element name="PARTNER_TYPE" type="xsd:string"/>
+          <xsd:element name="VENDOR_NBR" type="xsd:string"/>
+          <xsd:element name="DIRECT_IND" type="xsd:string"/>
+          <xsd:element name="NAMED_ACCT_IND" type="xsd:string"/>
+          <xsd:element name="NON_VAL_ACCT_IND" type="xsd:string"/>
+          <xsd:element name="PARTNER_IND" type="xsd:string"/>
+          <xsd:element name="SIEBEL_ROWID" type="xsd:string"/>
+          <xsd:element name="SAP_CUST_NUMBER" type="xsd:string"/>
+          <xsd:element name="MDM_LEGACY_ID" type="xsd:string"/>
+          <xsd:element name="DATA_SRC_SYSTEM" type="xsd:string"/>
+          <xsd:element name="SAP_NAME_1" type="xsd:string"/>
+          <xsd:element name="SAP_NAME_2" type="xsd:string"/>
+          <xsd:element name="SAP_NAME_3" type="xsd:string"/>
+          <xsd:element name="SAP_NAME_4" type="xsd:string"/>
+          <!--Added for SFDC-->
+          <xsd:element name="Sales_Force_ID" type="xsd:string" default=""></xsd:element>
+          <xsd:element name="Draft_Account_Flag" type="xsd:string" default=""></xsd:element>
+          <!--END Added for SFDC-->
+          <xsd:element name="MDM_ACCOUNT_UCN" type="xsd:string"/>
+          <xsd:element name="ACCOUNT_NAME" type="xsd:string"/>
+          <xsd:element name="ACCOUNT_PARTY_TYPE" type="xsd:string"></xsd:element>
+          <xsd:element name="ACCOUNT_ADDRESS_1" type="xsd:string"></xsd:element>
+          <xsd:element name="ACCOUNT_ADDRESS_2" type="xsd:string"></xsd:element>
+          <xsd:element name="ACCOUNT_CITY" type="xsd:string"/>
+          <xsd:element name="ACCOUNT_STATE" type="xsd:string"/>
+          <xsd:element name="ACCOUNT_POSTAL_CODE" type="xsd:string"></xsd:element>
+          <xsd:element name="ACCOUNT_COUNTRY" type="xsd:string"/>
+          <!--Added for MDM-SFDC-->
+          <xsd:element name="LOCAL_NAME" type="xsd:string"/>
+          <xsd:element name="CURRENCY_CD" type="xsd:string"/>
+          <xsd:element name="TAX_ID" type="xsd:string"/>
+          <xsd:element name="PRICE_BAND_AGGREMENT" type="xsd:string"></xsd:element>
+          <!--END Added for MDM-SFDC-->
+          <!--Added for MDM-SFDC Track2-->
+          <xsd:element name="SITE_DESIGNATION" type="xsd:string"/>
+          <!--Ended for MDM-SFDC Track2-->
+          <!--start for MDM-SFDC Track3-->
+          <xsd:element name="CLEANSE_IND" type="xsd:string"></xsd:element>
+          <xsd:element name="RESELL_LEVEL" type="xsd:string"/>
+          <xsd:element name="PARTNERSHIP_STATUS" type="xsd:string"/>
+          <!--End for MDM-SFDC Track3-->
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AddressType">
+        <xsd:sequence>
+          <xsd:element name="ROWID_ADDRESS" type="xsd:string"/>
+          <xsd:element name="ROWID_ADDRESS_XREF" type="xsd:string"/>
+          <xsd:element name="ADDR_LN1" type="xsd:string"/>
+          <xsd:element name="ADDR_LN2" type="xsd:string"/>
+          <xsd:element name="ADDR_LN3" type="xsd:string"/>
+          <xsd:element name="ADDR_LN4" type="xsd:string"/>
+          <xsd:element name="CITY" type="xsd:string"/>
+          <xsd:element name="COUNTY" type="xsd:string"/>
+          <xsd:element name="DISTRICT" type="xsd:string"/>
+          <xsd:element name="STATE_CD" type="xsd:string"/>
+          <xsd:element name="POSTAL_CD" type="xsd:string"/>
+          <xsd:element name="COUNTRY_CD" type="xsd:string"/>
+          <xsd:element name="LANG_CD" type="xsd:string"/>
+          <xsd:element name="LONGITUDE" type="xsd:string"/>
+          <xsd:element name="LATITUDE" type="xsd:string"/>
+          <xsd:element name="ADDR_TYPE" type="xsd:string"/>
+          <xsd:element name="ADDR_STATUS" type="xsd:string"/>
+          <!--Added for M4M-->
+          <xsd:element name="ADDR_MKTG_PREF" type="xsd:string"/>
+          <!--END Added for M4M-->
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CommunicationType">
+        <xsd:sequence>
+          <xsd:element name="ROWID_COMMUNICATION" type="xsd:string"/>
+          <xsd:element name="COMM_TYPE" type="xsd:string"/>
+          <xsd:element name="COMM_VALUE" type="xsd:string"/>
+          <xsd:element name="COMM_STATUS" type="xsd:string"/>
+          <!--Added for M4M-->
+          <xsd:element name="COMM_EXTN" type="xsd:string"/>
+          <xsd:element name="COMM_MKTG_PREF" type="xsd:string"/>
+          <!--END Added for M4M-->
+          <xsd:element name="PRFRD_COMM_IND" type="xsd:string"/>
+          <xsd:element name="WEB_DOMAIN" type="xsd:string"/>
+          <!--Start for SFDC-Track4-->
+          <xsd:element name="COMM_SALES_PREF" type="xsd:string"/>
+          <!--End for SFDC-Track4-->
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ClassificationType">
+        <xsd:sequence>
+          <xsd:element name="ROWID_CLASSIFICTN" type="xsd:string"/>
+          <xsd:element name="CLASSIFICTN_TYPE" type="xsd:string"/>
+          <xsd:element name="CLASSIFICTN_VALUE" type="xsd:string"/>
+          <xsd:element name="CLASSIFICTN_METH" type="xsd:string"/>
+          <xsd:element name="START_DATE" type="xsd:string"/>
+          <xsd:element name="END_DATE" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartyOrgExtType">
+        <xsd:sequence>
+          <xsd:element name="ROWID_ORG_EXTN" type="xsd:string"/>
+          <xsd:element name="ORG_DUNS_NBR" type="xsd:string"/>
+          <xsd:element name="TRADE_NAME" type="xsd:string"/>
+          <xsd:element name="TRADE_NAME_2" type="xsd:string"/>
+          <xsd:element name="SITE_EMPL_CNT" type="xsd:string"/>
+          <xsd:element name="GLBL_EMPL_CNT" type="xsd:string"/>
+          <xsd:element name="VERTICAL" type="xsd:string"/>
+          <xsd:element name="REVENUE" type="xsd:string"/>
+          <xsd:element name="LINE_OF_BUS" type="xsd:string"/>
+          <xsd:element name="PRIM_SIC" type="xsd:string"/>
+          <xsd:element name="SEC_SIC" type="xsd:string"/>
+          <xsd:element name="SALES_VOLUME" type="xsd:string"/>
+          <xsd:element name="SALES_AMOUNT" type="xsd:string"/>
+          <xsd:element name="CURRENCY_CD" type="xsd:string"/>
+          <xsd:element name="OUT_OF_BUS_IND" type="xsd:string"/>
+          <xsd:element name="GLBL_ULT_IND" type="xsd:string"/>
+          <xsd:element name="FORTUNE_INFO" type="xsd:string"/>
+          <xsd:element name="HIERARCHY_LEVEL" type="xsd:string"/>
+          <xsd:element name="ORG_HQ_PARENT_DUNS" type="xsd:string"/>
+          <xsd:element name="ORG_DOM_ULT_DUNS" type="xsd:string"/>
+          <xsd:element name="ORG_GLB_ULT_DUNS" type="xsd:string"/>
+          <xsd:element name="MFE_GLBL_PARENT_NM" type="xsd:string"></xsd:element>
+          <xsd:element name="MFE_PARENT_NM" type="xsd:string"/>
+          <xsd:element name="MFE_WW_PARENT_NM" type="xsd:string"></xsd:element>
+          <xsd:element name="MFE_SUBSDRY_PARENT_NM" type="xsd:string"></xsd:element>
+          <xsd:element name="MFE_PRTNR_PARENT_ORG" type="xsd:string"></xsd:element>
+          <xsd:element name="MFE_GLBL_PARENT_UCN" type="xsd:string"></xsd:element>
+          <xsd:element name="MFE_GLOBAL_PAR_NM_OVRIDE" type="xsd:string"></xsd:element>
+          <xsd:element name="SALES_REVNU_OVRID" type="xsd:string"></xsd:element>
+          <xsd:element name="MFE_EMP_CNT_OVERIDE" type="xsd:string"></xsd:element>
+          <xsd:element name="SIC_CD_OVRIDE" type="xsd:string"/>
+          <!--Added for MDM-SFDC Track2-->
+          <xsd:element name="MFE_WW_PARENT_PRTN_NM" type="xsd:string"/>
+          <xsd:element name="MFE_SUBSDRY_PARENT_PRTN_NM" type="xsd:string"/>
+          <xsd:element name="SIC_CD_OVRIDE_DESC" type="xsd:string"/>
+          <xsd:element name="MFE_SUBS_PARENT_UCN" type="xsd:string"/>
+          <xsd:element name="MFE_SUBS_PARENT_NM_OVRIDE" type="xsd:string"/>
+          <xsd:element name="SUBSIDIARY_IND" type="xsd:string"/>
+          <xsd:element name="CUSTOM_PARENT_UCN" type="xsd:string"/>
+          <xsd:element name="CUSTOM_PARENT_NAME" type="xsd:string"/>
+          <xsd:element name="MFE_COUNTRY_ULT_UCN" type="xsd:string"/>
+          <xsd:element name="COUNTRY_ULT_IND" type="xsd:string"/>
+          <xsd:element name="MFE_NEXT_LVL_SUBS_PAR_UCN" type="xsd:string"/>
+          <xsd:element name="MFE_NEXT_LVL_SUBS_PAR_NM" type="xsd:string"/>
+          <xsd:element name="GLB_FLG" type="xsd:string"/>
+          <xsd:element name="CUST_FLG" type="xsd:string"/>
+          <xsd:element name="PARTNER_FLG" type="xsd:string"/>
+          <xsd:element name="ACTIVE_TXN_FLG" type="xsd:string"/>
+          <xsd:element name="PARENT_FLG" type="xsd:string"/>
+          <xsd:element name="GLB_EMP_CNT_OVERRIDE" type="xsd:string"/>
+          <xsd:element name="TXN_5_YR_FLG" type="xsd:string"/>
+          <xsd:element name="TXN_7_YR_FLG" type="xsd:string"/>
+          <xsd:element name="MFE_TXN_5_YR_FLG" type="xsd:string"/>
+          <xsd:element name="MFE_TXN_7_YR_FLG" type="xsd:string"/>
+          <xsd:element name="G2K_FLG" type="xsd:string"/>
+          <xsd:element name="MDM_PARENT_UCN" type="xsd:string"/>
+          <xsd:element name="CUSTOMER_PARENT_FLAG" type="xsd:string"/>
+          <xsd:element name="GLB_SALES_REVNU_OVRID" type="xsd:string"/>
+          <!--Ended for MDM-SFDC Track2-->
+          <!--Start for MDM-SFDC Track3-->
+          <xsd:element name="PTR_PARENT_UCN" type="xsd:string"/>
+          <xsd:element name="PTR_PARENT_NM" type="xsd:string"/>
+          <xsd:element name="PTR_GLBL_PARENT_UCN" type="xsd:string"/>
+          <!--End for MDM-SFDC Track3-->
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartyPersonExtType">
+        <xsd:sequence>
+          <xsd:element name="ROWID_PRSN_EXTN" type="xsd:string"/>
+          <xsd:element name="PREFIX" type="xsd:string"/>
+          <xsd:element name="FIRST_NAME" type="xsd:string"/>
+          <xsd:element name="MIDDLE_NAME" type="xsd:string"/>
+          <xsd:element name="LAST_NAME" type="xsd:string"/>
+          <xsd:element name="SUFFIX" type="xsd:string"/>
+          <xsd:element name="PERSON_TYPE" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartyAccountRelationshipType">
+        <xsd:sequence>
+          <!--Added for MDM-SFDC Track2-->
+          <xsd:element name="MDM_PARENT_UCN" type="xsd:string"/>
+          <xsd:element name="MDM_PARENT_NAME" type="xsd:string"></xsd:element>
+          <xsd:element name="MDM_GLB_PARENT_UCN" type="xsd:string"/>
+          <xsd:element name="MDM_GLB_PARENT_NAME" type="xsd:string"/>
+          <xsd:element name="HIERARCHY_TYPE" type="xsd:string"/>
+          <xsd:element name="REL_TYPE" type="xsd:string"/>
+          <xsd:element name="SINGLE_SITE_FLAG" type="xsd:string"/>
+          <!--Ended for MDM-SFDC Track2-->
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartyXrefType">
+        <xsd:sequence>
+          <xsd:element name="ErrorMsg" type="xsd:string"/>
+          <xsd:element name="LAST_UPDATE_DATE" type="xsd:string"></xsd:element>
+          <xsd:element name="SRC_CREATE_DT" type="xsd:string"/>
+          <xsd:element name="UPDATE_BY" type="xsd:string"/>
+          <xsd:element name="ROWID_OBJECT" type="xsd:string"/>
+          <xsd:element name="ORIG_ROWID_OBJECT" type="xsd:string"></xsd:element>
+          <xsd:element name="BO_CLASS_CODE" type="xsd:string"/>
+          <xsd:element name="PARTY_TYPE" type="xsd:string"/>
+          <xsd:element name="PARTY_NAME" type="xsd:string"/>
+          <xsd:element name="GEO" type="xsd:string"/>
+          <xsd:element name="REGION" type="xsd:string"/>
+          <xsd:element name="STATUS_CD" type="xsd:string"/>
+          <xsd:element name="VAT_REG_NBR" type="xsd:string"/>
+          <xsd:element name="TAX_JURSDCTN_CD" type="xsd:string"/>
+          <xsd:element name="SALES_BLOCK_CD" type="xsd:string"/>
+          <xsd:element name="UCN" type="xsd:string"/>
+          <xsd:element name="LEGACY_UCN" type="xsd:string"/>
+          <xsd:element name="ENGLISH_NAME" type="xsd:string"/>
+          <xsd:element name="DNB_DBA_NAME" type="xsd:string"/>
+          <xsd:element name="DNB_SECOND_TRADE_STYLE" type="xsd:string"></xsd:element>
+          <xsd:element name="DNB_REG_NAME" type="xsd:string"/>
+          <xsd:element name="MSG_TRKN_ID" type="xsd:string"/>
+          <xsd:element name="PROCESS_STATE_IND" type="xsd:string"></xsd:element>
+          <xsd:element name="PHYSICAL_GEO" type="xsd:string"/>
+          <xsd:element name="PHYSICAL_REGION" type="xsd:string"/>
+          <!--Added for MDM-SFDC Track3-->
+          <xsd:element name="PARTNERSHIP_STATUS" type="xsd:string"></xsd:element>
+          <xsd:element name="DO_NOT_MERGE" type="xsd:string"/>
+          <xsd:element name="XREF" type="tns:XREFType" maxOccurs="unbounded" minOccurs="1"/>
+          <xsd:element name="Account" type="tns:AccountXrefType" maxOccurs="unbounded" minOccurs="0"/>
+          <xsd:element name="Address" type="tns:AddressXrefType" maxOccurs="unbounded" minOccurs="0"/>
+          <xsd:element name="Communication" type="tns:CommunicationXrefType" maxOccurs="unbounded" minOccurs="0"/>
+          <xsd:element name="Classification" type="tns:ClassificationXrefType" maxOccurs="unbounded" minOccurs="0"/>
+          <xsd:element name="PartyOrgExt" type="tns:PartyOrgExtXrefType" maxOccurs="unbounded" minOccurs="0"/>
+          <xsd:element name="PartyPersonExt" type="tns:PartyPersonExtXrefType" maxOccurs="unbounded" minOccurs="0"/>
+          <!--Removed for M4M-->
+          <!--<xsd:element name="PartyRelationship"
+					type="tns:PartyAccountRelationshipXrefType" maxOccurs="unbounded"
+					minOccurs="0" />-->
+          <!--End Removed for M4M-->
+          <!--Added M4M Types-->
+          <xsd:element name="PartyPerson" type="tns:PartyPersonXrefType" maxOccurs="unbounded" minOccurs="0"/>
+          <xsd:element name="PartyRel" type="tns:PartyRelationshipXrefType" maxOccurs="1" minOccurs="0"/>
+          <!--End M4M Types-->
+          <!--Added for MDM-SFDC-->
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--END Added for MDM-SFDC-->
+      <xsd:complexType name="XREFType">
+        <xsd:sequence>
+          <xsd:element name="SRC_SYSTEM" type="xsd:string"/>
+          <xsd:element name="SRC_PKEY" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AccountXrefType">
+        <xsd:sequence>
+          <xsd:element name="SRC_SYSTEM" type="xsd:string"/>
+          <xsd:element name="SRC_PKEY" type="xsd:string"/>
+          <xsd:element name="LAST_UPDATE_DATE" type="xsd:string"></xsd:element>
+          <xsd:element name="UPDATE_BY" type="xsd:string"/>
+          <xsd:element name="ROWID_ACCOUNT" type="xsd:string"/>
+          <xsd:element name="ACCT_NAME" type="xsd:string"/>
+          <xsd:element name="ALIAS_NAME" type="xsd:string"/>
+          <xsd:element name="ACCOUNT_REGION" type="xsd:string"/>
+          <xsd:element name="ACCOUNT_GEO" type="xsd:string"/>
+          <xsd:element name="MARKET" type="xsd:string"/>
+          <xsd:element name="ACCT_STATUS" type="xsd:string"/>
+          <xsd:element name="ACCT_TYPE" type="xsd:string"/>
+          <xsd:element name="CUST_GROUP" type="xsd:string"/>
+          <xsd:element name="PRICE_GROUP" type="xsd:string"/>
+          <xsd:element name="COMPANY_CD" type="xsd:string"/>
+          <xsd:element name="ACCOUNT_VAT_REG_NBR" type="xsd:string"/>
+          <xsd:element name="TAX_TYPE" type="xsd:string"/>
+          <xsd:element name="ACCOUNT_TAX_JURSDCTN_CD" type="xsd:string"/>
+          <xsd:element name="BILL_BLOCK_CD" type="xsd:string"/>
+          <xsd:element name="ORDR_BLOCK_CD" type="xsd:string"/>
+          <xsd:element name="DLVRY_BLOCK_CD" type="xsd:string"/>
+          <xsd:element name="POST_BLOCK_CD" type="xsd:string"/>
+          <xsd:element name="SALE_BLOCK_CD" type="xsd:string"/>
+          <xsd:element name="CHANNEL_ID" type="xsd:string"/>
+          <xsd:element name="PARTNER_TYPE" type="xsd:string"/>
+          <xsd:element name="VENDOR_NBR" type="xsd:string"/>
+          <xsd:element name="DIRECT_IND" type="xsd:string"/>
+          <xsd:element name="NAMED_ACCT_IND" type="xsd:string"/>
+          <xsd:element name="NON_VAL_ACCT_IND" type="xsd:string"/>
+          <xsd:element name="PARTNER_IND" type="xsd:string"/>
+          <xsd:element name="SIEBEL_ROWID" type="xsd:string"/>
+          <xsd:element name="SAP_CUST_NUMBER" type="xsd:string"/>
+          <xsd:element name="MDM_LEGACY_ID" type="xsd:string"/>
+          <xsd:element name="DATA_SRC_SYSTEM" type="xsd:string"/>
+          <xsd:element name="SAP_NAME_1" type="xsd:string"/>
+          <xsd:element name="SAP_NAME_2" type="xsd:string"/>
+          <xsd:element name="SAP_NAME_3" type="xsd:string"/>
+          <xsd:element name="SAP_NAME_4" type="xsd:string"/>
+          <!--Added for SFDC-->
+          <xsd:element name="Sales_Force_ID" type="xsd:string" default=""></xsd:element>
+          <xsd:element name="Draft_Account_Flag" type="xsd:string" default=""></xsd:element>
+          <!--END Added for SFDC-->
+          <xsd:element name="MDM_ACCOUNT_UCN" type="xsd:string"/>
+          <xsd:element name="ACCOUNT_NAME" type="xsd:string"/>
+          <xsd:element name="ACCOUNT_PARTY_TYPE" type="xsd:string"></xsd:element>
+          <xsd:element name="ACCOUNT_ADDRESS_1" type="xsd:string"></xsd:element>
+          <xsd:element name="ACCOUNT_ADDRESS_2" type="xsd:string"></xsd:element>
+          <xsd:element name="ACCOUNT_CITY" type="xsd:string"/>
+          <xsd:element name="ACCOUNT_STATE" type="xsd:string"/>
+          <xsd:element name="ACCOUNT_POSTAL_CODE" type="xsd:string"></xsd:element>
+          <xsd:element name="ACCOUNT_COUNTRY" type="xsd:string"/>
+          <xsd:element name="NAME_QUALITY_IDENTIFIER" type="xsd:string"></xsd:element>
+          <!--Added for MDM-SFDC-->
+          <xsd:element name="LOCAL_NAME" type="xsd:string"/>
+          <xsd:element name="CURRENCY_CD" type="xsd:string"/>
+          <xsd:element name="TAX_ID" type="xsd:string"/>
+          <xsd:element name="PRICE_BAND_AGGREMENT" type="xsd:string"></xsd:element>
+          <!--END Added for MDM-SFDC-->
+          <!--Added for MDM-SFDC Track2-->
+          <xsd:element name="SITE_DESIGNATION" type="xsd:string"></xsd:element>
+          <!--Ended for MDM-SFDC Track2-->
+          <!--Added for MDMP-2885-->
+          <xsd:element name="IS_DENIED_FLG" type="xsd:string"/>
+          <!--start for MDM-SFDC Track3-->
+          <xsd:element name="CLEANSE_IND" type="xsd:string"></xsd:element>
+          <xsd:element name="RESELL_LEVEL" type="xsd:string"/>
+          <xsd:element name="PARTNERSHIP_STATUS" type="xsd:string"/>
+          <!--End for MDM-SFDC Track3-->
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AddressXrefType">
+        <xsd:sequence>
+          <xsd:element name="SRC_SYSTEM" type="xsd:string"/>
+          <xsd:element name="SRC_PKEY" type="xsd:string"/>
+          <xsd:element name="LAST_UPDATE_DATE" type="xsd:string"></xsd:element>
+          <xsd:element name="UPDATE_BY" type="xsd:string"/>
+          <xsd:element name="ROWID_ADDRESS" type="xsd:string"/>
+          <xsd:element name="ROWID_ADDRESS_XREF" type="xsd:string"/>
+          <xsd:element name="ADDR_LN1" type="xsd:string"/>
+          <xsd:element name="ADDR_LN2" type="xsd:string"/>
+          <xsd:element name="ADDR_LN3" type="xsd:string"/>
+          <xsd:element name="ADDR_LN4" type="xsd:string"/>
+          <xsd:element name="CITY" type="xsd:string"/>
+          <xsd:element name="COUNTY" type="xsd:string"/>
+          <xsd:element name="DISTRICT" type="xsd:string"/>
+          <xsd:element name="STATE_CD" type="xsd:string"/>
+          <xsd:element name="POSTAL_CD" type="xsd:string"/>
+          <xsd:element name="COUNTRY_CD" type="xsd:string"/>
+          <xsd:element name="LANG_CD" type="xsd:string"/>
+          <xsd:element name="LONGITUDE" type="xsd:string"/>
+          <xsd:element name="LATITUDE" type="xsd:string"/>
+          <xsd:element name="ADDR_TYPE" type="xsd:string"/>
+          <xsd:element name="ADDR_STATUS" type="xsd:string"/>
+          <!--Added for M4M-->
+          <xsd:element name="ADDR_MKTG_PREF" type="xsd:string"/>
+          <!--END Added for M4M-->
+          <xsd:element name="ADDRESS_QUALITY_IDENTIFIER" type="xsd:string"/>
+          <!--Added for MDM-SFDC Track3-->
+          <xsd:element name="PARTNERSHIP_STATUS" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CommunicationXrefType">
+        <xsd:sequence>
+          <xsd:element name="SRC_SYSTEM" type="xsd:string"/>
+          <xsd:element name="SRC_PKEY" type="xsd:string"/>
+          <xsd:element name="LAST_UPDATE_DATE" type="xsd:string"></xsd:element>
+          <xsd:element name="UPDATE_BY" type="xsd:string"/>
+          <xsd:element name="ROWID_COMMUNICATION" type="xsd:string"/>
+          <xsd:element name="COMM_TYPE" type="xsd:string"/>
+          <xsd:element name="COMM_VALUE" type="xsd:string"/>
+          <xsd:element name="COMM_STATUS" type="xsd:string"/>
+          <!--Added for M4M-->
+          <xsd:element name="COMM_EXTN" type="xsd:string"/>
+          <xsd:element name="COMM_MKTG_PREF" type="xsd:string"/>
+          <!--END Added for M4M-->
+          <xsd:element name="PRFRD_COMM_IND" type="xsd:string"/>
+          <xsd:element name="WEB_DOMAIN" type="xsd:string"/>
+          <!--Start for SFDC-Track4-->
+          <xsd:element name="COMM_SALES_PREF" type="xsd:string"/>
+          <!--End for SFDC-Track4-->
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ClassificationXrefType">
+        <xsd:sequence>
+          <xsd:element name="SRC_SYSTEM" type="xsd:string"/>
+          <xsd:element name="SRC_PKEY" type="xsd:string"/>
+          <xsd:element name="LAST_UPDATE_DATE" type="xsd:string"></xsd:element>
+          <xsd:element name="UPDATE_BY" type="xsd:string"/>
+          <xsd:element name="ROWID_CLASSIFICTN" type="xsd:string"/>
+          <xsd:element name="CLASSIFICTN_TYPE" type="xsd:string"/>
+          <xsd:element name="CLASSIFICTN_VALUE" type="xsd:string"/>
+          <xsd:element name="CLASSIFICTN_METH" type="xsd:string"/>
+          <xsd:element name="START_DATE" type="xsd:string"/>
+          <xsd:element name="END_DATE" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartyOrgExtXrefType">
+        <xsd:sequence>
+          <xsd:element name="SRC_SYSTEM" type="xsd:string"/>
+          <xsd:element name="SRC_PKEY" type="xsd:string"/>
+          <xsd:element name="PARTY_SRC_SYS_KEY" type="xsd:string"/>
+          <xsd:element name="LAST_UPDATE_DATE" type="xsd:string"></xsd:element>
+          <xsd:element name="UPDATE_BY" type="xsd:string"/>
+          <xsd:element name="ROWID_ORG_EXTN" type="xsd:string"/>
+          <xsd:element name="ORG_DUNS_NBR" type="xsd:string"/>
+          <xsd:element name="TRADE_NAME" type="xsd:string"/>
+          <xsd:element name="TRADE_NAME_2" type="xsd:string"/>
+          <xsd:element name="SITE_EMPL_CNT" type="xsd:string"/>
+          <xsd:element name="GLBL_EMPL_CNT" type="xsd:string"/>
+          <xsd:element name="VERTICAL" type="xsd:string"/>
+          <xsd:element name="REVENUE" type="xsd:string"/>
+          <xsd:element name="LINE_OF_BUS" type="xsd:string"/>
+          <xsd:element name="PRIM_SIC" type="xsd:string"/>
+          <xsd:element name="SEC_SIC" type="xsd:string"/>
+          <xsd:element name="SALES_VOLUME" type="xsd:string"/>
+          <xsd:element name="SALES_AMOUNT" type="xsd:string"/>
+          <xsd:element name="CURRENCY_CD" type="xsd:string"/>
+          <xsd:element name="OUT_OF_BUS_IND" type="xsd:string"/>
+          <xsd:element name="GLBL_ULT_IND" type="xsd:string"/>
+          <xsd:element name="FORTUNE_INFO" type="xsd:string"/>
+          <xsd:element name="HIERARCHY_LEVEL" type="xsd:string"/>
+          <xsd:element name="ORG_HQ_PARENT_DUNS" type="xsd:string"/>
+          <xsd:element name="ORG_DOM_ULT_DUNS" type="xsd:string"/>
+          <xsd:element name="ORG_GLB_ULT_DUNS" type="xsd:string"/>
+          <xsd:element name="MFE_GLBL_PARENT_NM" type="xsd:string"></xsd:element>
+          <xsd:element name="MFE_PARENT_NM" type="xsd:string"/>
+          <xsd:element name="MFE_WW_PARENT_NM" type="xsd:string"></xsd:element>
+          <xsd:element name="MFE_SUBSDRY_PARENT_NM" type="xsd:string"></xsd:element>
+          <xsd:element name="MFE_PRTNR_PARENT_ORG" type="xsd:string"></xsd:element>
+          <xsd:element name="MFE_GLBL_PARENT_UCN" type="xsd:string"></xsd:element>
+          <xsd:element name="MFE_GLOBAL_PAR_NM_OVRIDE" type="xsd:string"></xsd:element>
+          <xsd:element name="SALES_REVNU_OVRID" type="xsd:string"></xsd:element>
+          <xsd:element name="MFE_EMP_CNT_OVERIDE" type="xsd:string"></xsd:element>
+          <xsd:element name="SIC_CD_OVRIDE" type="xsd:string"/>
+          <!--Added for MDM-SFDC Track2-->
+          <xsd:element name="MFE_WW_PARENT_PRTN_NM" type="xsd:string"/>
+          <xsd:element name="MFE_SUBSDRY_PARENT_PRTN_NM" type="xsd:string"/>
+          <xsd:element name="SIC_CD_OVRIDE_DESC" type="xsd:string"/>
+          <xsd:element name="MFE_SUBS_PARENT_UCN" type="xsd:string"/>
+          <xsd:element name="MFE_SUBS_PARENT_NM_OVRIDE" type="xsd:string"/>
+          <xsd:element name="SUBSIDIARY_IND" type="xsd:string"/>
+          <xsd:element name="CUSTOM_PARENT_UCN" type="xsd:string"/>
+          <xsd:element name="CUSTOM_PARENT_NAME" type="xsd:string"/>
+          <xsd:element name="MFE_COUNTRY_ULT_UCN" type="xsd:string"/>
+          <xsd:element name="COUNTRY_ULT_IND" type="xsd:string"/>
+          <xsd:element name="MFE_NEXT_LVL_SUBS_PAR_UCN" type="xsd:string"/>
+          <xsd:element name="MFE_NEXT_LVL_SUBS_PAR_NM" type="xsd:string"/>
+          <xsd:element name="GLB_FLG" type="xsd:string"/>
+          <xsd:element name="CUST_FLG" type="xsd:string"/>
+          <xsd:element name="PARTNER_FLG" type="xsd:string"/>
+          <xsd:element name="ACTIVE_TXN_FLG" type="xsd:string"/>
+          <xsd:element name="PARENT_FLG" type="xsd:string"/>
+          <xsd:element name="GLB_EMP_CNT_OVERRIDE" type="xsd:string"/>
+          <xsd:element name="TXN_5_YR_FLG" type="xsd:string"/>
+          <xsd:element name="TXN_7_YR_FLG" type="xsd:string"/>
+          <xsd:element name="MFE_TXN_5_YR_FLG" type="xsd:string"/>
+          <xsd:element name="MFE_TXN_7_YR_FLG" type="xsd:string"/>
+          <xsd:element name="G2K_FLG" type="xsd:string"/>
+          <xsd:element name="MDM_PARENT_UCN" type="xsd:string"/>
+          <xsd:element name="CUSTOMER_PARENT_FLAG" type="xsd:string"></xsd:element>
+          <xsd:element name="GLB_SALES_REVNU_OVRID" type="xsd:string"></xsd:element>
+          <!--Ended for MDM-SFDC Track2-->
+          <!--Start for MDM-SFDC Track3-->
+          <xsd:element name="PTR_PARENT_UCN" type="xsd:string"/>
+          <xsd:element name="PTR_PARENT_NM" type="xsd:string"/>
+          <xsd:element name="PTR_GLBL_PARENT_UCN" type="xsd:string"/>
+          <!--End for MDM-SFDC Track3-->
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartyPersonExtXrefType">
+        <xsd:sequence>
+          <xsd:element name="SRC_SYSTEM" type="xsd:string"/>
+          <xsd:element name="SRC_PKEY" type="xsd:string"/>
+          <xsd:element name="LAST_UPDATE_DATE" type="xsd:string"></xsd:element>
+          <xsd:element name="UPDATE_BY" type="xsd:string"/>
+          <xsd:element name="ROWID_PRSN_EXTN" type="xsd:string"/>
+          <xsd:element name="PREFIX" type="xsd:string"/>
+          <xsd:element name="FIRST_NAME" type="xsd:string"/>
+          <xsd:element name="MIDDLE_NAME" type="xsd:string"/>
+          <xsd:element name="LAST_NAME" type="xsd:string"/>
+          <xsd:element name="SUFFIX" type="xsd:string"/>
+          <xsd:element name="PERSON_TYPE" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartyAccountRelationshipXrefType">
+        <xsd:sequence>
+          <xsd:element name="SRC_SYSTEM" type="xsd:string"/>
+          <xsd:element name="SRC_PKEY" type="xsd:string"/>
+          <xsd:element name="LAST_UPDATE_DATE" type="xsd:string"></xsd:element>
+          <xsd:element name="UPDATE_BY" type="xsd:string"/>
+          <!--<xsd:element name="PARENT_UCN" type="xsd:string" />
+				<xsd:element name="DOM_PARENT_UCN" type="xsd:string">
+				</xsd:element>
+				<xsd:element name="GLB_PARENT_UCN" type="xsd:string"></xsd:element>
+				<xsd:element name="HIERARCHY_TYPE" type="xsd:string" />
+				<xsd:element name="REL_TYPE" type="xsd:string" />-->
+          <!--Added for MDM-SFDC Track2-->
+          <xsd:element name="MDM_PARENT_UCN" type="xsd:string"/>
+          <xsd:element name="MDM_PARENT_NAME" type="xsd:string"></xsd:element>
+          <xsd:element name="MDM_GLB_PARENT_UCN" type="xsd:string"/>
+          <xsd:element name="MDM_GLB_PARENT_NAME" type="xsd:string"/>
+          <xsd:element name="HIERARCHY_TYPE" type="xsd:string"/>
+          <xsd:element name="REL_TYPE" type="xsd:string"/>
+          <xsd:element name="SINGLE_SITE_FLAG" type="xsd:string"/>
+          <!--Ended for MDM-SFDC Track2-->
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--Added for M4M-->
+      <xsd:complexType name="PartyPersonType">
+        <xsd:sequence>
+          <xsd:element name="ErrorMsg" type="xsd:string"/>
+          <xsd:element name="ROWID_OBJECT" type="xsd:string"/>
+          <xsd:element name="PREFIX" type="xsd:string"/>
+          <xsd:element name="FIRST_NAME" type="xsd:string"/>
+          <xsd:element name="MIDDLE_NAME" type="xsd:string"/>
+          <xsd:element name="LAST_NAME" type="xsd:string"/>
+          <xsd:element name="SUFFIX" type="xsd:string"/>
+          <xsd:element name="JOB_TITLE" type="xsd:string"/>
+          <xsd:element name="JOB_LEVEL" type="xsd:string"/>
+          <xsd:element name="JOB_FUNCTION" type="xsd:string"/>
+          <xsd:element name="PREF_LANGUAGE" type="xsd:string"/>
+          <xsd:element name="PERSON_STATUS" type="xsd:string"/>
+          <xsd:element name="PERSON_TYPE" type="xsd:string"/>
+          <xsd:element name="LIST_SOURCE" type="xsd:string"/>
+          <xsd:element name="DATA_SOURCE_SYSTEM" type="xsd:string"/>
+          <xsd:element name="LATTICE_SCORE" type="xsd:string"/>
+          <xsd:element name="REPORTED_COMPANY_NAME" type="xsd:string"/>
+          <!--Added for SFDC-->
+          <xsd:element name="Sales_Force_ID" type="xsd:string"/>
+          <!--END Added for SFDC-->
+          <!--Added for SFDC-Track4-->
+          <xsd:element name="SRC_ACCOUNT_ID" type="xsd:string"/>
+          <xsd:element name="JOB_ROLE" type="xsd:string"/>
+          <xsd:element name="PARTNER_CONTACT_FLG" type="xsd:string"/>
+          <!--End for SFDC-Track4-->
+          <xsd:element name="CLEANSE_IND" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartyPersonXrefType">
+        <xsd:sequence>
+          <xsd:element name="ErrorMsg" type="xsd:string"/>
+          <xsd:element name="SRC_SYSTEM" type="xsd:string"/>
+          <xsd:element name="SRC_PKEY" type="xsd:string"/>
+          <xsd:element name="LAST_UPDATE_DATE" type="xsd:string"></xsd:element>
+          <xsd:element name="SRC_CREATE_DT" type="xsd:string"/>
+          <xsd:element name="UPDATE_BY" type="xsd:string"/>
+          <xsd:element name="ROWID_OBJECT" type="xsd:string"/>
+          <xsd:element name="ORIG_ROWID_OBJECT" type="xsd:string"></xsd:element>
+          <xsd:element name="PREFIX" type="xsd:string"/>
+          <xsd:element name="FIRST_NAME" type="xsd:string"/>
+          <xsd:element name="MIDDLE_NAME" type="xsd:string"/>
+          <xsd:element name="LAST_NAME" type="xsd:string"/>
+          <xsd:element name="SUFFIX" type="xsd:string"/>
+          <xsd:element name="JOB_TITLE" type="xsd:string"/>
+          <xsd:element name="JOB_LEVEL" type="xsd:string"/>
+          <xsd:element name="JOB_FUNCTION" type="xsd:string"/>
+          <xsd:element name="PREF_LANGUAGE" type="xsd:string"/>
+          <xsd:element name="PERSON_STATUS" type="xsd:string"/>
+          <xsd:element name="PERSON_TYPE" type="xsd:string"/>
+          <xsd:element name="LIST_SOURCE" type="xsd:string"/>
+          <xsd:element name="DATA_SOURCE_SYSTEM" type="xsd:string"/>
+          <xsd:element name="LATTICE_SCORE" type="xsd:string"/>
+          <xsd:element name="REPORTED_COMPANY_NAME" type="xsd:string"/>
+          <!--Added for SFDC-->
+          <xsd:element name="Sales_Force_ID" type="xsd:string"/>
+          <!--END Added for SFDC-->
+          <!--Start for SFDC-Track4-->
+          <xsd:element name="SRC_ACCOUNT_ID" type="xsd:string"/>
+          <xsd:element name="JOB_ROLE" type="xsd:string"/>
+          <xsd:element name="PARTNER_CONTACT_FLG" type="xsd:string"/>
+          <xsd:element name="SRC_ACCOUNT_NAME" type="xsd:string"/>
+          <!--End for SFDC-Track4-->
+          <xsd:element name="CLEANSE_IND" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartyPersonRelationshipType">
+        <xsd:sequence>
+          <xsd:element name="ID" type="xsd:string"/>
+          <xsd:element name="CHILD_XREF" type="tns:XREFType" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartyContactRelationshipType">
+        <xsd:sequence>
+          <xsd:element name="PARENT_ID" type="xsd:string"/>
+          <xsd:element name="CHILD_ID" type="tns:PartyPersonRelationshipType" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element name="HIERARCHY_TYPE" type="xsd:string"/>
+          <xsd:element name="REL_TYPE" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartyPersonMDMRelationshipType">
+        <xsd:sequence>
+          <xsd:element name="ID" type="xsd:string"/>
+          <xsd:element name="MDM_UCN" type="xsd:string"/>
+          <xsd:element name="PARTY_TYPE" type="xsd:string"/>
+          <xsd:element name="XREF" type="tns:XREFType" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartyContactMDMRelationshipType">
+        <xsd:sequence>
+          <xsd:element name="MDM_PARENT_ID" type="tns:PartyPersonMDMRelationshipType" maxOccurs="1" minOccurs="1"/>
+          <xsd:element name="MDM_CHILD_ID" type="tns:PartyPersonMDMRelationshipType" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element name="HIERARCHY_TYPE" type="xsd:string"/>
+          <xsd:element name="REL_TYPE" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartyContactRelationshipXrefType">
+        <xsd:sequence>
+          <xsd:element name="SRC_SYSTEM" type="xsd:string"/>
+          <xsd:element name="SRC_PKEY" type="xsd:string"/>
+          <xsd:element name="LAST_UPDATE_DATE" type="xsd:string"></xsd:element>
+          <xsd:element name="UPDATE_BY" type="xsd:string"/>
+          <xsd:element name="PARENT_ID" type="xsd:string"/>
+          <xsd:element name="CHILD_ID" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element name="HIERARCHY_TYPE" type="xsd:string"/>
+          <xsd:element name="REL_TYPE" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartyRelationshipType">
+        <xsd:sequence>
+          <xsd:element name="PARTY_PERSON_REL" type="tns:PartyContactRelationshipType" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element name="PARTY_ACCOUNT_REL" type="tns:PartyAccountRelationshipType" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartyRelationshipXrefType">
+        <xsd:sequence>
+          <xsd:element name="PARTY_PERSON_REL" type="tns:PartyContactRelationshipXrefType" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element name="PARTY_ACCOUNT_REL" type="tns:PartyAccountRelationshipXrefType" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--End addition for M4M-->
+      <xsd:complexType name="PartySearchCriteriaType">
+        <xsd:sequence>
+          <xsd:element name="PARTY_NAME" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+          <xsd:element name="ADDR_LN1" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+          <xsd:element name="ADDR_LN2" type="xsd:string" maxOccurs="1" minOccurs="0"/>
+          <xsd:element name="ADDR_LN3" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+          <xsd:element name="CITY" type="xsd:string" maxOccurs="1" minOccurs="0"/>
+          <xsd:element name="COUNTRY_CD" type="xsd:string" maxOccurs="1" minOccurs="0"/>
+          <xsd:element name="STATE_CD" type="xsd:string" maxOccurs="1" minOccurs="0"/>
+          <xsd:element name="POSTAL_CD" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+          <xsd:element name="UCN" type="xsd:string" maxOccurs="1" minOccurs="0"/>
+          <xsd:element name="CUST_GROUP" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+          <xsd:element name="PARTY_TYPE" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+          <xsd:element name="SRC_SYSTEM" type="xsd:string" maxOccurs="1" minOccurs="1"></xsd:element>
+          <xsd:element name="SRC_SYSTEM_ID" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+          <xsd:element name="FIRST_NAME" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+          <xsd:element name="LAST_NAME" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+          <xsd:element name="EMAIL_ADDRESS" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+          <xsd:element name="CONTACT_SOURCE_ID" type="xsd:string" maxOccurs="1" minOccurs="1"></xsd:element>
+          <xsd:element name="CONTACT_SOURCE_SYSTEM" type="xsd:string" maxOccurs="1" minOccurs="1"></xsd:element>
+          <xsd:element name="MDM_CONTACT_ID" type="xsd:string" maxOccurs="1" minOccurs="1"></xsd:element>
+          <xsd:element name="ACCOUNT_SOURCE_ID" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+          <xsd:element name="ACCOUNT_SOURCE_SYSTEM" type="xsd:string" maxOccurs="1" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="searchPartyRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="RecordCountThresold" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="Search_Type" type="xsd:string" maxOccurs="1" minOccurs="0"/>
+            <xsd:element name="Match_score_thresold" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="ErrorMsg" type="xsd:string" maxOccurs="1" minOccurs="0"/>
+            <xsd:element name="PartySearchCriteria" type="tns:PartySearchCriteriaType" maxOccurs="1" minOccurs="1"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchPartyResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Status" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+            <xsd:element name="ErrorMsg" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+            <xsd:element name="PartyProfile" type="tns:PartyProfileType" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="upsertPartyRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ErrorMsg" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+            <xsd:element name="Party" type="tns:PartyXrefType" maxOccurs="unbounded" minOccurs="1"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="upsertPartyResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Status" type="xsd:string" maxOccurs="1" minOccurs="1"></xsd:element>
+            <xsd:element name="WarningMsg" type="xsd:string" maxOccurs="1" minOccurs="1"></xsd:element>
+            <xsd:element name="ErrorMsg" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+            <!--Added for US449 START-->
+            <xsd:element name="ErrorCd" type="xsd:string" maxOccurs="1" minOccurs="0"/>
+            <!--Added for US449 END-->
+            <xsd:element name="Party" type="tns:PartyUpsertRespType" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="PartyProfileType">
+        <xsd:sequence>
+          <xsd:element name="GoldenCopy" type="tns:GoldenCopy" maxOccurs="1" minOccurs="1"></xsd:element>
+          <xsd:element name="XREFCopy" type="tns:XREFCopy" maxOccurs="unbounded" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="GoldenCopy">
+        <xsd:sequence>
+          <xsd:element name="MatchScore" type="xsd:int" maxOccurs="1" minOccurs="0"></xsd:element>
+          <xsd:element name="Party" type="tns:PartyType" maxOccurs="1" minOccurs="1"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="XREFCopy">
+        <xsd:sequence>
+          <xsd:element name="PartyXref" type="tns:PartyXrefType" maxOccurs="unbounded" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartyUpsertRespType">
+        <xsd:sequence>
+          <xsd:element name="ErrorMsg" type="xsd:string"/>
+          <xsd:element name="ROWID_OBJECT" type="xsd:string"></xsd:element>
+          <xsd:element name="SRC_SYSTEM" type="xsd:string"/>
+          <xsd:element name="SRC_SYSTEM_ID" type="xsd:string"></xsd:element>
+          <!--Added for MDM-SFDC-->
+          <xsd:element name="BO_CLASS_CODE" type="xsd:string"></xsd:element>
+          <xsd:element name="PARTY_TYPE" type="xsd:string"/>
+          <xsd:element name="PARTY_NAME" type="xsd:string"/>
+          <xsd:element name="GEO" type="xsd:string"/>
+          <xsd:element name="REGION" type="xsd:string"/>
+          <xsd:element name="STATUS_CD" type="xsd:string"/>
+          <xsd:element name="VAT_REG_NBR" type="xsd:string"/>
+          <xsd:element name="TAX_JURSDCTN_CD" type="xsd:string"/>
+          <xsd:element name="SALES_BLOCK_CD" type="xsd:string"/>
+          <xsd:element name="UCN" type="xsd:string"/>
+          <xsd:element name="LEGACY_UCN" type="xsd:string"/>
+          <xsd:element name="ENGLISH_NAME" type="xsd:string"></xsd:element>
+          <!--END Added for MDM-SFDC-->
+          <xsd:element name="MSG_TRKN_ID" type="xsd:string"/>
+          <xsd:element name="SRC_UPDT_BY" type="xsd:string"/>
+          <xsd:element name="LAST_UPDATE_DATE" type="xsd:string"></xsd:element>
+          <xsd:element name="PHYSICAL_GEO" type="xsd:string"></xsd:element>
+          <xsd:element name="PHYSICAL_REGION" type="xsd:string"/>
+          <xsd:element name="Account" type="tns:Account" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+          <xsd:element name="Address" type="tns:Address" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+          <xsd:element name="Communication" type="tns:Communication" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+          <xsd:element name="Classification" type="tns:Classification" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+          <xsd:element name="PartyOrgExt" type="tns:PartyOrgExt" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+          <xsd:element name="PartyPersonExt" type="tns:PartyPersonExt" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+          <xsd:element name="PartyPerson" type="tns:PartyPerson" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+          <xsd:element name="PartyRel" type="tns:PartyRel" maxOccurs="1" minOccurs="0"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Account">
+        <xsd:sequence>
+          <xsd:element name="ROWID_ACCOUNT" type="xsd:string"></xsd:element>
+          <xsd:element name="MDM_LEGACY_ID" type="xsd:string"></xsd:element>
+          <xsd:element name="SRC_SYSTEM" type="xsd:string"/>
+          <xsd:element name="SRC_SYSTEM_ID" type="xsd:string"></xsd:element>
+          <xsd:element name="ACCT_NAME" type="xsd:string"/>
+          <xsd:element name="ALIAS_NAME" type="xsd:string"/>
+          <xsd:element name="ACCOUNT_REGION" type="xsd:string"/>
+          <xsd:element name="ACCOUNT_GEO" type="xsd:string"/>
+          <xsd:element name="MARKET" type="xsd:string"/>
+          <xsd:element name="ACCT_STATUS" type="xsd:string"/>
+          <xsd:element name="ACCT_TYPE" type="xsd:string"/>
+          <xsd:element name="CUST_GROUP" type="xsd:string"/>
+          <xsd:element name="PRICE_GROUP" type="xsd:string"/>
+          <xsd:element name="COMPANY_CD" type="xsd:string"/>
+          <xsd:element name="ACCOUNT_VAT_REG_NBR" type="xsd:string"/>
+          <xsd:element name="TAX_TYPE" type="xsd:string"/>
+          <xsd:element name="ACCOUNT_TAX_JURSDCTN_CD" type="xsd:string"/>
+          <xsd:element name="BILL_BLOCK_CD" type="xsd:string"/>
+          <xsd:element name="ORDR_BLOCK_CD" type="xsd:string"/>
+          <xsd:element name="DLVRY_BLOCK_CD" type="xsd:string"/>
+          <xsd:element name="POST_BLOCK_CD" type="xsd:string"/>
+          <xsd:element name="SALE_BLOCK_CD" type="xsd:string"/>
+          <xsd:element name="CHANNEL_ID" type="xsd:string"/>
+          <xsd:element name="PARTNER_TYPE" type="xsd:string"/>
+          <xsd:element name="VENDOR_NBR" type="xsd:string"/>
+          <xsd:element name="DIRECT_IND" type="xsd:string"/>
+          <xsd:element name="NAMED_ACCT_IND" type="xsd:string"/>
+          <xsd:element name="NON_VAL_ACCT_IND" type="xsd:string"/>
+          <xsd:element name="PARTNER_IND" type="xsd:string"/>
+          <xsd:element name="SIEBEL_ROWID" type="xsd:string"></xsd:element>
+          <xsd:element name="SAP_CUST_NUMBER" type="xsd:string"></xsd:element>
+          <xsd:element name="DATA_SRC_SYSTEM" type="xsd:string"></xsd:element>
+          <xsd:element name="SAP_NAME_1" type="xsd:string"/>
+          <xsd:element name="SAP_NAME_2" type="xsd:string"/>
+          <xsd:element name="SAP_NAME_3" type="xsd:string"/>
+          <xsd:element name="SAP_NAME_4" type="xsd:string"/>
+          <!--Added for SFDC-->
+          <xsd:element name="Sales_Force_ID" type="xsd:string" default=""></xsd:element>
+          <xsd:element name="Draft_Account_Flag" type="xsd:string" default=""></xsd:element>
+          <!--END Added for SFDC-->
+          <xsd:element name="MDM_ACCOUNT_UCN" type="xsd:string"></xsd:element>
+          <xsd:element name="ACCOUNT_NAME" type="xsd:string"></xsd:element>
+          <xsd:element name="ACCOUNT_PARTY_TYPE" type="xsd:string"></xsd:element>
+          <xsd:element name="ACCOUNT_ADDRESS_1" type="xsd:string"></xsd:element>
+          <xsd:element name="ACCOUNT_ADDRESS_2" type="xsd:string"></xsd:element>
+          <xsd:element name="ACCOUNT_CITY" type="xsd:string"></xsd:element>
+          <xsd:element name="ACCOUNT_STATE" type="xsd:string"></xsd:element>
+          <xsd:element name="ACCOUNT_POSTAL_CODE" type="xsd:string"></xsd:element>
+          <xsd:element name="ACCOUNT_COUNTRY" type="xsd:string"></xsd:element>
+          <!--Added for MDM-SFDC-->
+          <xsd:element name="LOCAL_NAME" type="xsd:string"/>
+          <xsd:element name="CURRENCY_CD" type="xsd:string"/>
+          <xsd:element name="TAX_ID" type="xsd:string"/>
+          <xsd:element name="PRICE_BAND_AGGREMENT" type="xsd:string"/>
+          <!--END Added for MDM-SFDC-->
+          <!--Added for MDM-SFDC Track2-->
+          <xsd:element name="SITE_DESIGNATION" type="xsd:string"/>
+          <!--Ended for MDM-SFDC Track2-->
+          <!--start for MDM-SFDC Track3-->
+          <xsd:element name="CLEANSE_IND" type="xsd:string"></xsd:element>
+          <xsd:element name="RESELL_LEVEL" type="xsd:string"/>
+          <xsd:element name="PARTNERSHIP_STATUS" type="xsd:string"/>
+          <!--End for MDM-SFDC Track3-->
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Address">
+        <xsd:sequence>
+          <xsd:element name="ROWID_ADDRESS" type="xsd:string"></xsd:element>
+          <xsd:element name="SRC_SYSTEM" type="xsd:string"/>
+          <xsd:element name="SRC_SYSTEM_ID" type="xsd:string"/>
+          <xsd:element name="ROWID_ADDRESS_XREF" type="xsd:string"/>
+          <xsd:element name="ADDR_LN1" type="xsd:string"/>
+          <xsd:element name="ADDR_LN2" type="xsd:string"/>
+          <xsd:element name="ADDR_LN3" type="xsd:string"/>
+          <xsd:element name="ADDR_LN4" type="xsd:string"/>
+          <xsd:element name="CITY" type="xsd:string"/>
+          <xsd:element name="COUNTY" type="xsd:string"/>
+          <xsd:element name="DISTRICT" type="xsd:string"/>
+          <xsd:element name="STATE_CD" type="xsd:string"/>
+          <xsd:element name="POSTAL_CD" type="xsd:string"/>
+          <xsd:element name="COUNTRY_CD" type="xsd:string"/>
+          <xsd:element name="LANG_CD" type="xsd:string"/>
+          <xsd:element name="LONGITUDE" type="xsd:string"/>
+          <xsd:element name="LATITUDE" type="xsd:string"/>
+          <xsd:element name="ADDR_TYPE" type="xsd:string"/>
+          <xsd:element name="ADDR_STATUS" type="xsd:string"/>
+          <!--Added for M4M-->
+          <xsd:element name="ADDR_MKTG_PREF" type="xsd:string"/>
+          <!--END Added for M4M-->
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Communication">
+        <xsd:sequence>
+          <xsd:element name="ROWID_COMMUNICATION" type="xsd:string"></xsd:element>
+          <xsd:element name="SRC_SYSTEM" type="xsd:string"/>
+          <xsd:element name="SRC_SYSTEM_ID" type="xsd:string"></xsd:element>
+          <xsd:element name="COMM_TYPE" type="xsd:string"/>
+          <xsd:element name="COMM_VALUE" type="xsd:string"/>
+          <xsd:element name="COMM_STATUS" type="xsd:string"/>
+          <!--Added for M4M-->
+          <xsd:element name="COMM_EXTN" type="xsd:string"/>
+          <xsd:element name="COMM_MKTG_PREF" type="xsd:string"/>
+          <!--END Added for M4M-->
+          <xsd:element name="PRFRD_COMM_IND" type="xsd:string"/>
+          <xsd:element name="WEB_DOMAIN" type="xsd:string"/>
+          <!--Start for SFDC-Track4-->
+          <xsd:element name="COMM_SALES_PREF" type="xsd:string"/>
+          <!--End for SFDC-Track4-->
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Classification">
+        <xsd:sequence>
+          <xsd:element name="ROWID_CLASSIFICTN" type="xsd:string"/>
+          <xsd:element name="SRC_SYSTEM" type="xsd:string"/>
+          <xsd:element name="SRC_SYSTEM_ID" type="xsd:string"/>
+          <xsd:element name="CLASSIFICTN_TYPE" type="xsd:string"/>
+          <xsd:element name="CLASSIFICTN_VALUE" type="xsd:string"/>
+          <xsd:element name="CLASSIFICTN_METH" type="xsd:string"/>
+          <xsd:element name="START_DATE" type="xsd:string"/>
+          <xsd:element name="END_DATE" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartyOrgExt">
+        <xsd:sequence>
+          <xsd:element name="ROWID_ORG_EXTN" type="xsd:string"></xsd:element>
+          <xsd:element name="SRC_SYSTEM" type="xsd:string"/>
+          <xsd:element name="SRC_SYSTEM_ID" type="xsd:string"></xsd:element>
+          <xsd:element name="ORG_DUNS_NBR" type="xsd:string"/>
+          <xsd:element name="TRADE_NAME" type="xsd:string"/>
+          <xsd:element name="TRADE_NAME_2" type="xsd:string"/>
+          <xsd:element name="SITE_EMPL_CNT" type="xsd:string"/>
+          <xsd:element name="GLBL_EMPL_CNT" type="xsd:string"/>
+          <xsd:element name="VERTICAL" type="xsd:string"/>
+          <xsd:element name="REVENUE" type="xsd:string"/>
+          <xsd:element name="LINE_OF_BUS" type="xsd:string"/>
+          <xsd:element name="PRIM_SIC" type="xsd:string"/>
+          <xsd:element name="SEC_SIC" type="xsd:string"/>
+          <xsd:element name="SALES_VOLUME" type="xsd:string"/>
+          <xsd:element name="SALES_AMOUNT" type="xsd:string"/>
+          <xsd:element name="CURRENCY_CD" type="xsd:string"/>
+          <xsd:element name="OUT_OF_BUS_IND" type="xsd:string"/>
+          <xsd:element name="GLBL_ULT_IND" type="xsd:string"/>
+          <xsd:element name="FORTUNE_INFO" type="xsd:string"/>
+          <xsd:element name="HIERARCHY_LEVEL" type="xsd:string"/>
+          <xsd:element name="ORG_HQ_PARENT_DUNS" type="xsd:string"/>
+          <xsd:element name="ORG_DOM_ULT_DUNS" type="xsd:string"/>
+          <xsd:element name="ORG_GLB_ULT_DUNS" type="xsd:string"/>
+          <xsd:element name="MFE_GLBL_PARENT_NM" type="xsd:string"></xsd:element>
+          <xsd:element name="MFE_PARENT_NM" type="xsd:string"></xsd:element>
+          <xsd:element name="MFE_WW_PARENT_NM" type="xsd:string"></xsd:element>
+          <xsd:element name="MFE_SUBSDRY_PARENT_NM" type="xsd:string"></xsd:element>
+          <xsd:element name="MFE_PRTNR_PARENT_ORG" type="xsd:string"></xsd:element>
+          <xsd:element name="MFE_GLBL_PARENT_UCN" type="xsd:string"></xsd:element>
+          <xsd:element name="MFE_GLOBAL_PAR_NM_OVRIDE" type="xsd:string"></xsd:element>
+          <xsd:element name="SALES_REVNU_OVRID" type="xsd:string"></xsd:element>
+          <xsd:element name="MFE_EMP_CNT_OVERIDE" type="xsd:string"></xsd:element>
+          <xsd:element name="SIC_CD_OVRIDE" type="xsd:string"></xsd:element>
+          <!--Added for MDM-SFDC Track2-->
+          <xsd:element name="MFE_WW_PARENT_PRTN_NM" type="xsd:string"/>
+          <xsd:element name="MFE_SUBSDRY_PARENT_PRTN_NM" type="xsd:string"/>
+          <xsd:element name="SIC_CD_OVRIDE_DESC" type="xsd:string"/>
+          <xsd:element name="MFE_SUBS_PARENT_UCN" type="xsd:string"/>
+          <xsd:element name="MFE_SUBS_PARENT_NM_OVRIDE" type="xsd:string"/>
+          <xsd:element name="SUBSIDIARY_IND" type="xsd:string"/>
+          <xsd:element name="CUSTOM_PARENT_UCN" type="xsd:string"/>
+          <xsd:element name="CUSTOM_PARENT_NAME" type="xsd:string"/>
+          <xsd:element name="MFE_COUNTRY_ULT_UCN" type="xsd:string"/>
+          <xsd:element name="COUNTRY_ULT_IND" type="xsd:string"/>
+          <xsd:element name="MFE_NEXT_LVL_SUBS_PAR_UCN" type="xsd:string"/>
+          <xsd:element name="MFE_NEXT_LVL_SUBS_PAR_NM" type="xsd:string"/>
+          <xsd:element name="GLB_FLG" type="xsd:string"/>
+          <xsd:element name="CUST_FLG" type="xsd:string"/>
+          <xsd:element name="PARTNER_FLG" type="xsd:string"/>
+          <xsd:element name="ACTIVE_TXN_FLG" type="xsd:string"/>
+          <xsd:element name="PARENT_FLG" type="xsd:string"/>
+          <xsd:element name="GLB_EMP_CNT_OVERRIDE" type="xsd:string"/>
+          <xsd:element name="TXN_5_YR_FLG" type="xsd:string"/>
+          <xsd:element name="TXN_7_YR_FLG" type="xsd:string"/>
+          <xsd:element name="MFE_TXN_5_YR_FLG" type="xsd:string"/>
+          <xsd:element name="MFE_TXN_7_YR_FLG" type="xsd:string"/>
+          <xsd:element name="G2K_FLG" type="xsd:string"/>
+          <xsd:element name="MDM_PARENT_UCN" type="xsd:string"></xsd:element>
+          <xsd:element name="CUSTOMER_PARENT_FLAG" type="xsd:string"></xsd:element>
+          <xsd:element name="GLB_SALES_REVNU_OVRID" type="xsd:string"/>
+          <!--Ended for MDM-SFDC Track2-->
+          <!--Start for MDM-SFDC Track3-->
+          <xsd:element name="PTR_PARENT_UCN" type="xsd:string"/>
+          <xsd:element name="PTR_PARENT_NM" type="xsd:string"/>
+          <xsd:element name="PTR_GLBL_PARENT_UCN" type="xsd:string"/>
+          <!--End for MDM-SFDC Track3-->
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartyRel">
+        <xsd:sequence>
+          <xsd:element name="PARTY_PERSON_REL" type="tns:PartyContactRelationshipType" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element name="PARTY_PERSON_MDM_REL" type="tns:PartyContactMDMRelationshipType" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element name="PARTY_ACCOUNT_REL" type="tns:PartyAccountRelationshipType" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartyPersonExt">
+        <xsd:sequence>
+          <xsd:element name="ROWID_PRSN_EXTN" type="xsd:string"></xsd:element>
+          <xsd:element name="SRC_SYSTEM" type="xsd:string"/>
+          <xsd:element name="SRC_SYSTEM_ID" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="deletePartyRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Batch_ID" type="xsd:string" maxOccurs="1" minOccurs="1"></xsd:element>
+            <xsd:element name="ErrorMsg" type="xsd:string"/>
+            <xsd:element name="DeleteRecord" type="tns:DeleteRecordType" maxOccurs="unbounded" minOccurs="1"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deletePartyResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Status" type="xsd:string"/>
+            <xsd:element name="Batch_ID" type="xsd:string"></xsd:element>
+            <xsd:element name="ErrorMsg" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="DeleteRecordType">
+        <xsd:sequence>
+          <xsd:element name="SRC_SYSTEM" type="xsd:string"/>
+          <xsd:element name="SRC_SYSTEM_ID" type="xsd:string"/>
+          <xsd:element name="Status" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartyPerson">
+        <xsd:sequence>
+          <xsd:element name="ROWID_PERSON" type="xsd:string"></xsd:element>
+          <xsd:element name="SRC_SYSTEM" type="xsd:string"/>
+          <xsd:element name="SRC_SYSTEM_ID" type="xsd:string"></xsd:element>
+          <!--Added for SFDC-Track4-->
+          <xsd:element name="PREFIX" type="xsd:string"/>
+          <xsd:element name="FIRST_NAME" type="xsd:string"/>
+          <xsd:element name="MIDDLE_NAME" type="xsd:string"/>
+          <xsd:element name="LAST_NAME" type="xsd:string"/>
+          <xsd:element name="SUFFIX" type="xsd:string"/>
+          <xsd:element name="JOB_TITLE" type="xsd:string"/>
+          <xsd:element name="JOB_LEVEL" type="xsd:string"/>
+          <xsd:element name="JOB_FUNCTION" type="xsd:string"/>
+          <xsd:element name="PREF_LANGUAGE" type="xsd:string"/>
+          <xsd:element name="PERSON_STATUS" type="xsd:string"/>
+          <xsd:element name="PERSON_TYPE" type="xsd:string"/>
+          <xsd:element name="LIST_SOURCE" type="xsd:string"/>
+          <xsd:element name="DATA_SOURCE_SYSTEM" type="xsd:string"/>
+          <xsd:element name="LATTICE_SCORE" type="xsd:string"/>
+          <xsd:element name="REPORTED_COMPANY_NAME" type="xsd:string"/>
+          <xsd:element name="Sales_Force_ID" type="xsd:string"/>
+          <xsd:element name="SRC_ACCOUNT_ID" type="xsd:string"></xsd:element>
+          <xsd:element name="JOB_ROLE" type="xsd:string"/>
+          <xsd:element name="PARTNER_CONTACT_FLG" type="xsd:string"></xsd:element>
+          <xsd:element name="CLEANSE_IND" type="xsd:string"/>
+          <!--END Added for SFDC-track4-->
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="mdmUpsertPartyResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Status" type="xsd:string" maxOccurs="1" minOccurs="1"></xsd:element>
+            <xsd:element name="WarningMsg" type="xsd:string" maxOccurs="1" minOccurs="1"></xsd:element>
+            <xsd:element name="ErrorMsg" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+            <!--Added for US449 START-->
+            <xsd:element name="ErrorCd" type="xsd:string" maxOccurs="1" minOccurs="0"/>
+            <!--Added for US449 END-->
+            <xsd:element name="UPDATE_DATE" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+            <xsd:element name="Party" type="tns:PartyUpsertRespType" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+            <!--Added for MDM-SFDC-->
+            <xsd:element name="XREFCopy" type="tns:XREFCopy" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+            <xsd:element name="UpsertStatus" type="tns:StatusType" maxOccurs="1" minOccurs="1"></xsd:element>
+            <!--END Added for MDM-SFDC-->
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="mdmUpsertPartyRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ErrorMsg" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+            <xsd:element name="Party" type="tns:PartyXrefType" maxOccurs="unbounded" minOccurs="1"></xsd:element>
+            <xsd:element name="UpsertStatus" type="tns:StatusType" maxOccurs="1" minOccurs="1"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <!--Added for MDM-SFDC-->
+      <xsd:complexType name="StatusType">
+        <xsd:sequence>
+          <xsd:element name="ErrorCode" type="xsd:string"></xsd:element>
+          <xsd:element name="ErrorMsg" type="xsd:string"></xsd:element>
+          <xsd:element name="COMMENT" type="xsd:string"></xsd:element>
+          <xsd:element name="CURRENT_PROCESS_STEP" type="xsd:string"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--END Added for MDM-SFDC-->
+      <xsd:element name="searchPartyHierarchyResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Status" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+            <xsd:element name="ErrorMsg" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+            <xsd:element name="PartyHierarchyProfile" type="tns:PartyHierarchyProfileType" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="PartyHierarchyProfileType">
+        <xsd:sequence>
+          <xsd:element name="MDMGlobalParentUCN" type="xsd:string"></xsd:element>
+          <xsd:element name="MDMGlobalParentName" type="xsd:string"></xsd:element>
+          <xsd:element name="HierarchyProfile" type="tns:HierarchyProfile" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+          <xsd:element name="PartyProfile" type="tns:PartyProfileType" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--END Added for MDM-SFDC-->
+      <xsd:element name="searchPartyHierarchyRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="RecordCountThresold" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="Search_Type" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="Match_score_thresold" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="ErrorMsg" type="xsd:string" maxOccurs="1" minOccurs="0"/>
+            <xsd:element name="PartySearchCriteria" type="tns:PartySearchCriteriaType" maxOccurs="1" minOccurs="1"></xsd:element>
+            <xsd:element name="HierarchyType" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="upsertPartyOrgExtnRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ErrorMsg" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+            <xsd:element name="PartyOrgExt" type="tns:PartyOrgExtXrefType" maxOccurs="unbounded" minOccurs="1"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="upsertPartyOrgExtnResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="UpsertResponse" type="tns:GenericUpsertResponse" maxOccurs="unbounded" minOccurs="1"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="upsertPartyGroupRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ErrorMsg" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+            <xsd:element name="PartyGroupType" type="tns:PartyGroupXrefType" maxOccurs="unbounded" minOccurs="1"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="upsertPartyGroupResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="UpsertResponse" type="tns:GenericUpsertResponse" maxOccurs="unbounded" minOccurs="1"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchContactRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Search_Type" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="RecordCountThresold" type="xsd:string" maxOccurs="1" minOccurs="0"/>
+            <xsd:element name="Match_score_thresold" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="ContactSearchCriteria" type="tns:ContactSearchCriteriaType" maxOccurs="1" minOccurs="1"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchContactResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Status" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+            <xsd:element name="ErrorMsg" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+            <xsd:element name="ContactProfiles" type="tns:ContactProfileType" maxOccurs="1" minOccurs="0"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ContactSearchCriteriaType">
+        <xsd:sequence>
+          <xsd:element name="FIRST_NAME" type="xsd:string"/>
+          <xsd:element name="LAST_NAME" type="xsd:string"/>
+          <xsd:element name="EMAIL_ADDRESS" type="xsd:string"/>
+          <xsd:element name="ACCOUNT_NAME" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ContactProfileType">
+        <xsd:sequence>
+          <xsd:element name="Contact" type="tns:ContactType" maxOccurs="unbounded" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ContactType">
+        <xsd:sequence>
+          <xsd:element name="MatchScore" type="xsd:int" maxOccurs="1" minOccurs="0"/>
+          <xsd:element name="MDM_CONTACT_ID" type="xsd:string"/>
+          <xsd:element name="FIRST_NAME" type="xsd:string"/>
+          <xsd:element name="LAST_NAME" type="xsd:string"/>
+          <xsd:element name="EMAIL_ADDRESS" type="xsd:string"/>
+          <xsd:element name="ACCOUNT_UCN" type="xsd:string"/>
+          <xsd:element name="ACCOUNT_NAME" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="hierarchySearchRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="UCN" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hierarchySearchResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Status" type="xsd:string" maxOccurs="1" minOccurs="1"></xsd:element>
+            <xsd:element name="ErrorMessage" type="xsd:string" maxOccurs="1" minOccurs="1"></xsd:element>
+            <xsd:element name="Request" type="tns:HierarchyRequestType" maxOccurs="1" minOccurs="1"/>
+            <xsd:element name="Response" type="tns:HierarchyResponseType" maxOccurs="1" minOccurs="1"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="HistoricalUCNs">
+        <xsd:sequence>
+          <xsd:element name="HISTORICAL_UCN" type="xsd:string" maxOccurs="unbounded" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Party">
+        <xsd:sequence>
+          <xsd:element name="ROWID_OBJECT" type="xsd:string" maxOccurs="1" minOccurs="1"></xsd:element>
+          <xsd:element name="UCN" type="xsd:string" maxOccurs="1" minOccurs="1"></xsd:element>
+          <xsd:element name="PARTY_NAME" type="xsd:string" maxOccurs="1" minOccurs="1"></xsd:element>
+          <xsd:element name="MDM_PARENT_UCN" type="xsd:string" maxOccurs="1" minOccurs="1"></xsd:element>
+          <xsd:element name="GEO" type="xsd:string" maxOccurs="1" minOccurs="1"></xsd:element>
+          <xsd:element name="COUNTRY_NAME" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+          <xsd:element name="HISTORICAL_UCNs" type="tns:HistoricalUCNs" maxOccurs="1" minOccurs="1"></xsd:element>
+          <xsd:element name="REQUEST_NODE" type="xsd:string" maxOccurs="1" minOccurs="1"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Parties">
+        <xsd:sequence>
+          <xsd:element name="Party" type="tns:Party" maxOccurs="unbounded" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="HierarchyResponseType">
+        <xsd:sequence>
+          <xsd:element name="MDM_GLOBAL_UCN" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+          <xsd:element name="MDM_GLOBAL_PARENT_NAME" type="xsd:string" maxOccurs="1" minOccurs="1"></xsd:element>
+          <xsd:element name="Parties" type="tns:Parties" maxOccurs="unbounded" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="HierarchyRequestType">
+        <xsd:sequence>
+          <xsd:element name="UCN" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="searchPartyRequest">
+    <wsdl:part element="tns:searchPartyRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="searchPartyResponse">
+    <wsdl:part element="tns:searchPartyResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="upsertPartyRequest">
+    <wsdl:part name="parameters" element="tns:upsertPartyRequest"/>
+  </wsdl:message>
+  <wsdl:message name="upsertPartyResponse">
+    <wsdl:part name="parameters" element="tns:upsertPartyResponse"/>
+  </wsdl:message>
+  <wsdl:message name="deletePartyRequest">
+    <wsdl:part name="parameters" element="tns:deletePartyRequest"/>
+  </wsdl:message>
+  <wsdl:message name="deletePartyResponse">
+    <wsdl:part name="parameters" element="tns:deletePartyResponse"/>
+  </wsdl:message>
+  <wsdl:message name="mdmUpsertPartyRequest">
+    <wsdl:part name="parameters" element="tns:mdmUpsertPartyRequest"/>
+  </wsdl:message>
+  <wsdl:message name="mdmUpsertPartyResponse">
+    <wsdl:part name="parameters" element="tns:mdmUpsertPartyResponse"/>
+  </wsdl:message>
+  <wsdl:message name="searchPartyHierarchyRequest">
+    <wsdl:part name="parameters" element="tns:searchPartyHierarchyRequest"/>
+  </wsdl:message>
+  <wsdl:message name="searchPartyHierarchyResponse">
+    <wsdl:part name="parameters" element="tns:searchPartyHierarchyResponse"/>
+  </wsdl:message>
+  <wsdl:message name="upsertPartyOrgExtnRequest">
+    <wsdl:part name="parameters" element="tns:upsertPartyOrgExtnRequest"/>
+  </wsdl:message>
+  <wsdl:message name="upsertPartyOrgExtnResponse">
+    <wsdl:part name="parameters" element="tns:upsertPartyOrgExtnResponse"/>
+  </wsdl:message>
+  <wsdl:message name="upsertPartyGroupRequest">
+    <wsdl:part name="parameters" element="tns:upsertPartyGroupRequest"/>
+  </wsdl:message>
+  <wsdl:message name="upsertPartyGroupResponse">
+    <wsdl:part name="parameters" element="tns:upsertPartyGroupResponse"/>
+  </wsdl:message>
+  <wsdl:message name="searchContactRequest">
+    <wsdl:part name="parameters" element="tns:searchContactRequest"/>
+  </wsdl:message>
+  <wsdl:message name="searchContactResponse">
+    <wsdl:part name="parameters" element="tns:searchContactResponse"/>
+  </wsdl:message>
+  <wsdl:message name="hierarchySearchRequest">
+    <wsdl:part name="parameters" element="tns:hierarchySearchRequest"/>
+  </wsdl:message>
+  <wsdl:message name="hierarchySearchResponse">
+    <wsdl:part name="parameters" element="tns:hierarchySearchResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="searchUpsertDelParty">
+    <wsdl:operation name="searchParty">
+      <wsdl:input message="tns:searchPartyRequest"/>
+      <wsdl:output message="tns:searchPartyResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="upsertParty">
+      <wsdl:input message="tns:upsertPartyRequest"/>
+      <wsdl:output message="tns:upsertPartyResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="deleteParty">
+      <wsdl:input message="tns:deletePartyRequest"/>
+      <wsdl:output message="tns:deletePartyResponse"/>
+    </wsdl:operation>
+    <!--Added for MDM-SFDC-->
+    <wsdl:operation name="mdmUpsertParty">
+      <wsdl:input message="tns:mdmUpsertPartyRequest"/>
+      <wsdl:output message="tns:mdmUpsertPartyResponse"/>
+    </wsdl:operation>
+    <!--Added for MDM-SFDC Track-2-->
+    <wsdl:operation name="searchPartyHierarchy">
+      <wsdl:input message="tns:searchPartyHierarchyRequest"/>
+      <wsdl:output message="tns:searchPartyHierarchyResponse"/>
+    </wsdl:operation>
+    <!--End for MDM-SFDC Track-2-->
+    <!--Start for MDM-SFDC Track-3-->
+    <wsdl:operation name="upsertPartyOrgExtn">
+      <wsdl:input message="tns:upsertPartyOrgExtnRequest"/>
+      <wsdl:output message="tns:upsertPartyOrgExtnResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="upsertPartyGroup">
+      <wsdl:input message="tns:upsertPartyGroupRequest"/>
+      <wsdl:output message="tns:upsertPartyGroupResponse"/>
+    </wsdl:operation>
+    <!--End for MDM-SFDC Track-3-->
+    <wsdl:operation name="searchContact">
+      <wsdl:input message="tns:searchContactRequest"/>
+      <wsdl:output message="tns:searchContactResponse"/>
+    </wsdl:operation>
+    <!--END Added for MDM-SFDC-->
+    <!--Start for MDMP-3194-->
+    <wsdl:operation name="hierarchySearch">
+      <wsdl:input message="tns:hierarchySearchRequest"/>
+      <wsdl:output message="tns:hierarchySearchResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <!--END for MDMP-3194-->
+  <wsdl:binding name="searchUpsertDelPartySOAP" type="tns:searchUpsertDelParty">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="searchParty">
+      <soap:operation soapAction="http://mdm.mcafee.com/searchUpsertDelParty/searchParty"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upsertParty">
+      <soap:operation soapAction="http://mdm.mcafee.com/searchUpsertDelParty/upsertParty"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteParty">
+      <soap:operation soapAction="http://mdm.mcafee.com/searchUpsertDelParty/deleteParty"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <!--Added for MDM-SFDC-->
+    <wsdl:operation name="mdmUpsertParty">
+      <soap:operation soapAction="http://mdm.mcafee.com/searchUpsertDelParty/mdmUpsertParty"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <!--END Added for MDM-SFDC-->
+    <!--Added for MDM-SFDC Track-2-->
+    <wsdl:operation name="searchPartyHierarchy">
+      <soap:operation soapAction="http://mdm.mcafee.com/searchUpsertDelParty/searchPartyHierarchy"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <!--End for MDM-SFDC Track-2-->
+    <!--Added for MDM-SFDC Track-3-->
+    <wsdl:operation name="upsertPartyOrgExtn">
+      <soap:operation soapAction="http://mdm.mcafee.com/searchUpsertDelParty/upsertPartyOrgExtn"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upsertPartyGroup">
+      <soap:operation soapAction="http://mdm.mcafee.com/searchUpsertDelParty/upsertPartyGroup"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <!--End for MDM-SFDC Track-3-->
+    <!--Added for MDM-SFDC Track-4-->
+    <wsdl:operation name="searchContact">
+      <soap:operation soapAction="http://mdm.mcafee.com/searchUpsertDelParty/searchContact"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <!--End for MDM-SFDC Track-4-->
+    <!--Added for MDMP-3194-->
+    <wsdl:operation name="hierarchySearch">
+      <soap:operation soapAction="http://mdm.mcafee.com/searchUpsertDelParty/hierarchySearch"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <!--End for MDMP-3194-->
+  </wsdl:binding>
+  <wsdl:service name="searchUpsertDelParty">
+    <wsdl:port binding="tns:searchUpsertDelPartySOAP" name="searchUpsertDelPartySOAP">
+      <soap:address location="http://dnvappmdm1:7007/MDMWebService/searchUpsertDelPartySOAP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://dnvappmdm1:7007/MDMWebService/searchUpsertDelPartySOAP</con:endpoint></con:endpoints><con:operation id="23a18b4d-35fa-4755-901d-29554b8edb52" isOneWay="false" action="http://mdm.mcafee.com/searchUpsertDelParty/deleteParty" name="deleteParty" bindingOperationName="deleteParty" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="991d3fd2-8108-4800-b8e7-f8d394e8387c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://dnvappmdm1:7007/MDMWebService/searchUpsertDelPartySOAP</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sear="http://mdm.mcafee.com/searchUpsertDelParty/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <sear:deletePartyRequest>\r
+         <Batch_ID>?</Batch_ID>\r
+         <ErrorMsg>?</ErrorMsg>\r
+         <!--1 or more repetitions:-->\r
+         <DeleteRecord>\r
+            <SRC_SYSTEM>?</SRC_SYSTEM>\r
+            <SRC_SYSTEM_ID>?</SRC_SYSTEM_ID>\r
+            <Status>?</Status>\r
+         </DeleteRecord>\r
+      </sear:deletePartyRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mdm.mcafee.com/searchUpsertDelParty/deleteParty"/></con:call></con:operation><con:operation id="8b79cc8b-46c0-4901-88ae-58c04f6a7ff6" isOneWay="false" action="http://mdm.mcafee.com/searchUpsertDelParty/hierarchySearch" name="hierarchySearch" bindingOperationName="hierarchySearch" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="50224f98-4fdb-44e6-9172-49a4c900d6b1" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://dnvappmdm1:7007/MDMWebService/searchUpsertDelPartySOAP</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sear="http://mdm.mcafee.com/searchUpsertDelParty/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <sear:hierarchySearchRequest>\r
+         <UCN>?</UCN>\r
+      </sear:hierarchySearchRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mdm.mcafee.com/searchUpsertDelParty/hierarchySearch"/></con:call></con:operation><con:operation id="b149be0a-4484-4790-9a33-8d6100e04cd9" isOneWay="false" action="http://mdm.mcafee.com/searchUpsertDelParty/mdmUpsertParty" name="mdmUpsertParty" bindingOperationName="mdmUpsertParty" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="731ca371-a709-4f0d-9150-80d33234bce6" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://dnvappmdm1:7007/MDMWebService/searchUpsertDelPartySOAP</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sear="http://mdm.mcafee.com/searchUpsertDelParty/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <sear:mdmUpsertPartyRequest>\r
+         <ErrorMsg>?</ErrorMsg>\r
+         <!--1 or more repetitions:-->\r
+         <Party>\r
+            <ErrorMsg>?</ErrorMsg>\r
+            <LAST_UPDATE_DATE>?</LAST_UPDATE_DATE>\r
+            <SRC_CREATE_DT>?</SRC_CREATE_DT>\r
+            <UPDATE_BY>?</UPDATE_BY>\r
+            <ROWID_OBJECT>?</ROWID_OBJECT>\r
+            <ORIG_ROWID_OBJECT>?</ORIG_ROWID_OBJECT>\r
+            <BO_CLASS_CODE>?</BO_CLASS_CODE>\r
+            <PARTY_TYPE>?</PARTY_TYPE>\r
+            <PARTY_NAME>?</PARTY_NAME>\r
+            <GEO>?</GEO>\r
+            <REGION>?</REGION>\r
+            <STATUS_CD>?</STATUS_CD>\r
+            <VAT_REG_NBR>?</VAT_REG_NBR>\r
+            <TAX_JURSDCTN_CD>?</TAX_JURSDCTN_CD>\r
+            <SALES_BLOCK_CD>?</SALES_BLOCK_CD>\r
+            <UCN>?</UCN>\r
+            <LEGACY_UCN>?</LEGACY_UCN>\r
+            <ENGLISH_NAME>?</ENGLISH_NAME>\r
+            <DNB_DBA_NAME>?</DNB_DBA_NAME>\r
+            <DNB_SECOND_TRADE_STYLE>?</DNB_SECOND_TRADE_STYLE>\r
+            <DNB_REG_NAME>?</DNB_REG_NAME>\r
+            <MSG_TRKN_ID>?</MSG_TRKN_ID>\r
+            <PROCESS_STATE_IND>?</PROCESS_STATE_IND>\r
+            <PHYSICAL_GEO>?</PHYSICAL_GEO>\r
+            <PHYSICAL_REGION>?</PHYSICAL_REGION>\r
+            <PARTNERSHIP_STATUS>?</PARTNERSHIP_STATUS>\r
+            <DO_NOT_MERGE>?</DO_NOT_MERGE>\r
+            <!--1 or more repetitions:-->\r
+            <XREF>\r
+               <SRC_SYSTEM>?</SRC_SYSTEM>\r
+               <SRC_PKEY>?</SRC_PKEY>\r
+            </XREF>\r
+            <!--Zero or more repetitions:-->\r
+            <Account>\r
+               <SRC_SYSTEM>?</SRC_SYSTEM>\r
+               <SRC_PKEY>?</SRC_PKEY>\r
+               <LAST_UPDATE_DATE>?</LAST_UPDATE_DATE>\r
+               <UPDATE_BY>?</UPDATE_BY>\r
+               <ROWID_ACCOUNT>?</ROWID_ACCOUNT>\r
+               <ACCT_NAME>?</ACCT_NAME>\r
+               <ALIAS_NAME>?</ALIAS_NAME>\r
+               <ACCOUNT_REGION>?</ACCOUNT_REGION>\r
+               <ACCOUNT_GEO>?</ACCOUNT_GEO>\r
+               <MARKET>?</MARKET>\r
+               <ACCT_STATUS>?</ACCT_STATUS>\r
+               <ACCT_TYPE>?</ACCT_TYPE>\r
+               <CUST_GROUP>?</CUST_GROUP>\r
+               <PRICE_GROUP>?</PRICE_GROUP>\r
+               <COMPANY_CD>?</COMPANY_CD>\r
+               <ACCOUNT_VAT_REG_NBR>?</ACCOUNT_VAT_REG_NBR>\r
+               <TAX_TYPE>?</TAX_TYPE>\r
+               <ACCOUNT_TAX_JURSDCTN_CD>?</ACCOUNT_TAX_JURSDCTN_CD>\r
+               <BILL_BLOCK_CD>?</BILL_BLOCK_CD>\r
+               <ORDR_BLOCK_CD>?</ORDR_BLOCK_CD>\r
+               <DLVRY_BLOCK_CD>?</DLVRY_BLOCK_CD>\r
+               <POST_BLOCK_CD>?</POST_BLOCK_CD>\r
+               <SALE_BLOCK_CD>?</SALE_BLOCK_CD>\r
+               <CHANNEL_ID>?</CHANNEL_ID>\r
+               <PARTNER_TYPE>?</PARTNER_TYPE>\r
+               <VENDOR_NBR>?</VENDOR_NBR>\r
+               <DIRECT_IND>?</DIRECT_IND>\r
+               <NAMED_ACCT_IND>?</NAMED_ACCT_IND>\r
+               <NON_VAL_ACCT_IND>?</NON_VAL_ACCT_IND>\r
+               <PARTNER_IND>?</PARTNER_IND>\r
+               <SIEBEL_ROWID>?</SIEBEL_ROWID>\r
+               <SAP_CUST_NUMBER>?</SAP_CUST_NUMBER>\r
+               <MDM_LEGACY_ID>?</MDM_LEGACY_ID>\r
+               <DATA_SRC_SYSTEM>?</DATA_SRC_SYSTEM>\r
+               <SAP_NAME_1>?</SAP_NAME_1>\r
+               <SAP_NAME_2>?</SAP_NAME_2>\r
+               <SAP_NAME_3>?</SAP_NAME_3>\r
+               <SAP_NAME_4>?</SAP_NAME_4>\r
+               <Sales_Force_ID/>\r
+               <Draft_Account_Flag/>\r
+               <MDM_ACCOUNT_UCN>?</MDM_ACCOUNT_UCN>\r
+               <ACCOUNT_NAME>?</ACCOUNT_NAME>\r
+               <ACCOUNT_PARTY_TYPE>?</ACCOUNT_PARTY_TYPE>\r
+               <ACCOUNT_ADDRESS_1>?</ACCOUNT_ADDRESS_1>\r
+               <ACCOUNT_ADDRESS_2>?</ACCOUNT_ADDRESS_2>\r
+               <ACCOUNT_CITY>?</ACCOUNT_CITY>\r
+               <ACCOUNT_STATE>?</ACCOUNT_STATE>\r
+               <ACCOUNT_POSTAL_CODE>?</ACCOUNT_POSTAL_CODE>\r
+               <ACCOUNT_COUNTRY>?</ACCOUNT_COUNTRY>\r
+               <NAME_QUALITY_IDENTIFIER>?</NAME_QUALITY_IDENTIFIER>\r
+               <LOCAL_NAME>?</LOCAL_NAME>\r
+               <CURRENCY_CD>?</CURRENCY_CD>\r
+               <TAX_ID>?</TAX_ID>\r
+               <PRICE_BAND_AGGREMENT>?</PRICE_BAND_AGGREMENT>\r
+               <SITE_DESIGNATION>?</SITE_DESIGNATION>\r
+               <IS_DENIED_FLG>?</IS_DENIED_FLG>\r
+               <CLEANSE_IND>?</CLEANSE_IND>\r
+               <RESELL_LEVEL>?</RESELL_LEVEL>\r
+               <PARTNERSHIP_STATUS>?</PARTNERSHIP_STATUS>\r
+            </Account>\r
+            <!--Zero or more repetitions:-->\r
+            <Address>\r
+               <SRC_SYSTEM>?</SRC_SYSTEM>\r
+               <SRC_PKEY>?</SRC_PKEY>\r
+               <LAST_UPDATE_DATE>?</LAST_UPDATE_DATE>\r
+               <UPDATE_BY>?</UPDATE_BY>\r
+               <ROWID_ADDRESS>?</ROWID_ADDRESS>\r
+               <ROWID_ADDRESS_XREF>?</ROWID_ADDRESS_XREF>\r
+               <ADDR_LN1>?</ADDR_LN1>\r
+               <ADDR_LN2>?</ADDR_LN2>\r
+               <ADDR_LN3>?</ADDR_LN3>\r
+               <ADDR_LN4>?</ADDR_LN4>\r
+               <CITY>?</CITY>\r
+               <COUNTY>?</COUNTY>\r
+               <DISTRICT>?</DISTRICT>\r
+               <STATE_CD>?</STATE_CD>\r
+               <POSTAL_CD>?</POSTAL_CD>\r
+               <COUNTRY_CD>?</COUNTRY_CD>\r
+               <LANG_CD>?</LANG_CD>\r
+               <LONGITUDE>?</LONGITUDE>\r
+               <LATITUDE>?</LATITUDE>\r
+               <ADDR_TYPE>?</ADDR_TYPE>\r
+               <ADDR_STATUS>?</ADDR_STATUS>\r
+               <ADDR_MKTG_PREF>?</ADDR_MKTG_PREF>\r
+               <ADDRESS_QUALITY_IDENTIFIER>?</ADDRESS_QUALITY_IDENTIFIER>\r
+               <PARTNERSHIP_STATUS>?</PARTNERSHIP_STATUS>\r
+            </Address>\r
+            <!--Zero or more repetitions:-->\r
+            <Communication>\r
+               <SRC_SYSTEM>?</SRC_SYSTEM>\r
+               <SRC_PKEY>?</SRC_PKEY>\r
+               <LAST_UPDATE_DATE>?</LAST_UPDATE_DATE>\r
+               <UPDATE_BY>?</UPDATE_BY>\r
+               <ROWID_COMMUNICATION>?</ROWID_COMMUNICATION>\r
+               <COMM_TYPE>?</COMM_TYPE>\r
+               <COMM_VALUE>?</COMM_VALUE>\r
+               <COMM_STATUS>?</COMM_STATUS>\r
+               <COMM_EXTN>?</COMM_EXTN>\r
+               <COMM_MKTG_PREF>?</COMM_MKTG_PREF>\r
+               <PRFRD_COMM_IND>?</PRFRD_COMM_IND>\r
+               <WEB_DOMAIN>?</WEB_DOMAIN>\r
+               <COMM_SALES_PREF>?</COMM_SALES_PREF>\r
+            </Communication>\r
+            <!--Zero or more repetitions:-->\r
+            <Classification>\r
+               <SRC_SYSTEM>?</SRC_SYSTEM>\r
+               <SRC_PKEY>?</SRC_PKEY>\r
+               <LAST_UPDATE_DATE>?</LAST_UPDATE_DATE>\r
+               <UPDATE_BY>?</UPDATE_BY>\r
+               <ROWID_CLASSIFICTN>?</ROWID_CLASSIFICTN>\r
+               <CLASSIFICTN_TYPE>?</CLASSIFICTN_TYPE>\r
+               <CLASSIFICTN_VALUE>?</CLASSIFICTN_VALUE>\r
+               <CLASSIFICTN_METH>?</CLASSIFICTN_METH>\r
+               <START_DATE>?</START_DATE>\r
+               <END_DATE>?</END_DATE>\r
+            </Classification>\r
+            <!--Zero or more repetitions:-->\r
+            <PartyOrgExt>\r
+               <SRC_SYSTEM>?</SRC_SYSTEM>\r
+               <SRC_PKEY>?</SRC_PKEY>\r
+               <PARTY_SRC_SYS_KEY>?</PARTY_SRC_SYS_KEY>\r
+               <LAST_UPDATE_DATE>?</LAST_UPDATE_DATE>\r
+               <UPDATE_BY>?</UPDATE_BY>\r
+               <ROWID_ORG_EXTN>?</ROWID_ORG_EXTN>\r
+               <ORG_DUNS_NBR>?</ORG_DUNS_NBR>\r
+               <TRADE_NAME>?</TRADE_NAME>\r
+               <TRADE_NAME_2>?</TRADE_NAME_2>\r
+               <SITE_EMPL_CNT>?</SITE_EMPL_CNT>\r
+               <GLBL_EMPL_CNT>?</GLBL_EMPL_CNT>\r
+               <VERTICAL>?</VERTICAL>\r
+               <REVENUE>?</REVENUE>\r
+               <LINE_OF_BUS>?</LINE_OF_BUS>\r
+               <PRIM_SIC>?</PRIM_SIC>\r
+               <SEC_SIC>?</SEC_SIC>\r
+               <SALES_VOLUME>?</SALES_VOLUME>\r
+               <SALES_AMOUNT>?</SALES_AMOUNT>\r
+               <CURRENCY_CD>?</CURRENCY_CD>\r
+               <OUT_OF_BUS_IND>?</OUT_OF_BUS_IND>\r
+               <GLBL_ULT_IND>?</GLBL_ULT_IND>\r
+               <FORTUNE_INFO>?</FORTUNE_INFO>\r
+               <HIERARCHY_LEVEL>?</HIERARCHY_LEVEL>\r
+               <ORG_HQ_PARENT_DUNS>?</ORG_HQ_PARENT_DUNS>\r
+               <ORG_DOM_ULT_DUNS>?</ORG_DOM_ULT_DUNS>\r
+               <ORG_GLB_ULT_DUNS>?</ORG_GLB_ULT_DUNS>\r
+               <MFE_GLBL_PARENT_NM>?</MFE_GLBL_PARENT_NM>\r
+               <MFE_PARENT_NM>?</MFE_PARENT_NM>\r
+               <MFE_WW_PARENT_NM>?</MFE_WW_PARENT_NM>\r
+               <MFE_SUBSDRY_PARENT_NM>?</MFE_SUBSDRY_PARENT_NM>\r
+               <MFE_PRTNR_PARENT_ORG>?</MFE_PRTNR_PARENT_ORG>\r
+               <MFE_GLBL_PARENT_UCN>?</MFE_GLBL_PARENT_UCN>\r
+               <MFE_GLOBAL_PAR_NM_OVRIDE>?</MFE_GLOBAL_PAR_NM_OVRIDE>\r
+               <SALES_REVNU_OVRID>?</SALES_REVNU_OVRID>\r
+               <MFE_EMP_CNT_OVERIDE>?</MFE_EMP_CNT_OVERIDE>\r
+               <SIC_CD_OVRIDE>?</SIC_CD_OVRIDE>\r
+               <MFE_WW_PARENT_PRTN_NM>?</MFE_WW_PARENT_PRTN_NM>\r
+               <MFE_SUBSDRY_PARENT_PRTN_NM>?</MFE_SUBSDRY_PARENT_PRTN_NM>\r
+               <SIC_CD_OVRIDE_DESC>?</SIC_CD_OVRIDE_DESC>\r
+               <MFE_SUBS_PARENT_UCN>?</MFE_SUBS_PARENT_UCN>\r
+               <MFE_SUBS_PARENT_NM_OVRIDE>?</MFE_SUBS_PARENT_NM_OVRIDE>\r
+               <SUBSIDIARY_IND>?</SUBSIDIARY_IND>\r
+               <CUSTOM_PARENT_UCN>?</CUSTOM_PARENT_UCN>\r
+               <CUSTOM_PARENT_NAME>?</CUSTOM_PARENT_NAME>\r
+               <MFE_COUNTRY_ULT_UCN>?</MFE_COUNTRY_ULT_UCN>\r
+               <COUNTRY_ULT_IND>?</COUNTRY_ULT_IND>\r
+               <MFE_NEXT_LVL_SUBS_PAR_UCN>?</MFE_NEXT_LVL_SUBS_PAR_UCN>\r
+               <MFE_NEXT_LVL_SUBS_PAR_NM>?</MFE_NEXT_LVL_SUBS_PAR_NM>\r
+               <GLB_FLG>?</GLB_FLG>\r
+               <CUST_FLG>?</CUST_FLG>\r
+               <PARTNER_FLG>?</PARTNER_FLG>\r
+               <ACTIVE_TXN_FLG>?</ACTIVE_TXN_FLG>\r
+               <PARENT_FLG>?</PARENT_FLG>\r
+               <GLB_EMP_CNT_OVERRIDE>?</GLB_EMP_CNT_OVERRIDE>\r
+               <TXN_5_YR_FLG>?</TXN_5_YR_FLG>\r
+               <TXN_7_YR_FLG>?</TXN_7_YR_FLG>\r
+               <MFE_TXN_5_YR_FLG>?</MFE_TXN_5_YR_FLG>\r
+               <MFE_TXN_7_YR_FLG>?</MFE_TXN_7_YR_FLG>\r
+               <G2K_FLG>?</G2K_FLG>\r
+               <MDM_PARENT_UCN>?</MDM_PARENT_UCN>\r
+               <CUSTOMER_PARENT_FLAG>?</CUSTOMER_PARENT_FLAG>\r
+               <GLB_SALES_REVNU_OVRID>?</GLB_SALES_REVNU_OVRID>\r
+               <PTR_PARENT_UCN>?</PTR_PARENT_UCN>\r
+               <PTR_PARENT_NM>?</PTR_PARENT_NM>\r
+               <PTR_GLBL_PARENT_UCN>?</PTR_GLBL_PARENT_UCN>\r
+            </PartyOrgExt>\r
+            <!--Zero or more repetitions:-->\r
+            <PartyPersonExt>\r
+               <SRC_SYSTEM>?</SRC_SYSTEM>\r
+               <SRC_PKEY>?</SRC_PKEY>\r
+               <LAST_UPDATE_DATE>?</LAST_UPDATE_DATE>\r
+               <UPDATE_BY>?</UPDATE_BY>\r
+               <ROWID_PRSN_EXTN>?</ROWID_PRSN_EXTN>\r
+               <PREFIX>?</PREFIX>\r
+               <FIRST_NAME>?</FIRST_NAME>\r
+               <MIDDLE_NAME>?</MIDDLE_NAME>\r
+               <LAST_NAME>?</LAST_NAME>\r
+               <SUFFIX>?</SUFFIX>\r
+               <PERSON_TYPE>?</PERSON_TYPE>\r
+            </PartyPersonExt>\r
+            <!--Zero or more repetitions:-->\r
+            <PartyPerson>\r
+               <ErrorMsg>?</ErrorMsg>\r
+               <SRC_SYSTEM>?</SRC_SYSTEM>\r
+               <SRC_PKEY>?</SRC_PKEY>\r
+               <LAST_UPDATE_DATE>?</LAST_UPDATE_DATE>\r
+               <SRC_CREATE_DT>?</SRC_CREATE_DT>\r
+               <UPDATE_BY>?</UPDATE_BY>\r
+               <ROWID_OBJECT>?</ROWID_OBJECT>\r
+               <ORIG_ROWID_OBJECT>?</ORIG_ROWID_OBJECT>\r
+               <PREFIX>?</PREFIX>\r
+               <FIRST_NAME>?</FIRST_NAME>\r
+               <MIDDLE_NAME>?</MIDDLE_NAME>\r
+               <LAST_NAME>?</LAST_NAME>\r
+               <SUFFIX>?</SUFFIX>\r
+               <JOB_TITLE>?</JOB_TITLE>\r
+               <JOB_LEVEL>?</JOB_LEVEL>\r
+               <JOB_FUNCTION>?</JOB_FUNCTION>\r
+               <PREF_LANGUAGE>?</PREF_LANGUAGE>\r
+               <PERSON_STATUS>?</PERSON_STATUS>\r
+               <PERSON_TYPE>?</PERSON_TYPE>\r
+               <LIST_SOURCE>?</LIST_SOURCE>\r
+               <DATA_SOURCE_SYSTEM>?</DATA_SOURCE_SYSTEM>\r
+               <LATTICE_SCORE>?</LATTICE_SCORE>\r
+               <REPORTED_COMPANY_NAME>?</REPORTED_COMPANY_NAME>\r
+               <Sales_Force_ID>?</Sales_Force_ID>\r
+               <SRC_ACCOUNT_ID>?</SRC_ACCOUNT_ID>\r
+               <JOB_ROLE>?</JOB_ROLE>\r
+               <PARTNER_CONTACT_FLG>?</PARTNER_CONTACT_FLG>\r
+               <SRC_ACCOUNT_NAME>?</SRC_ACCOUNT_NAME>\r
+               <CLEANSE_IND>?</CLEANSE_IND>\r
+            </PartyPerson>\r
+            <!--Optional:-->\r
+            <PartyRel>\r
+               <!--Zero or more repetitions:-->\r
+               <PARTY_PERSON_REL>\r
+                  <SRC_SYSTEM>?</SRC_SYSTEM>\r
+                  <SRC_PKEY>?</SRC_PKEY>\r
+                  <LAST_UPDATE_DATE>?</LAST_UPDATE_DATE>\r
+                  <UPDATE_BY>?</UPDATE_BY>\r
+                  <PARENT_ID>?</PARENT_ID>\r
+                  <!--Zero or more repetitions:-->\r
+                  <CHILD_ID>?</CHILD_ID>\r
+                  <HIERARCHY_TYPE>?</HIERARCHY_TYPE>\r
+                  <REL_TYPE>?</REL_TYPE>\r
+               </PARTY_PERSON_REL>\r
+               <!--Zero or more repetitions:-->\r
+               <PARTY_ACCOUNT_REL>\r
+                  <SRC_SYSTEM>?</SRC_SYSTEM>\r
+                  <SRC_PKEY>?</SRC_PKEY>\r
+                  <LAST_UPDATE_DATE>?</LAST_UPDATE_DATE>\r
+                  <UPDATE_BY>?</UPDATE_BY>\r
+                  <MDM_PARENT_UCN>?</MDM_PARENT_UCN>\r
+                  <MDM_PARENT_NAME>?</MDM_PARENT_NAME>\r
+                  <MDM_GLB_PARENT_UCN>?</MDM_GLB_PARENT_UCN>\r
+                  <MDM_GLB_PARENT_NAME>?</MDM_GLB_PARENT_NAME>\r
+                  <HIERARCHY_TYPE>?</HIERARCHY_TYPE>\r
+                  <REL_TYPE>?</REL_TYPE>\r
+                  <SINGLE_SITE_FLAG>?</SINGLE_SITE_FLAG>\r
+               </PARTY_ACCOUNT_REL>\r
+            </PartyRel>\r
+         </Party>\r
+         <UpsertStatus>\r
+            <ErrorCode>?</ErrorCode>\r
+            <ErrorMsg>?</ErrorMsg>\r
+            <COMMENT>?</COMMENT>\r
+            <CURRENT_PROCESS_STEP>?</CURRENT_PROCESS_STEP>\r
+         </UpsertStatus>\r
+      </sear:mdmUpsertPartyRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mdm.mcafee.com/searchUpsertDelParty/mdmUpsertParty"/></con:call></con:operation><con:operation id="15f9861d-5972-4d04-a94e-779964335a4b" isOneWay="false" action="http://mdm.mcafee.com/searchUpsertDelParty/searchContact" name="searchContact" bindingOperationName="searchContact" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="588db98e-2e65-427b-8520-bf3681e0393b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://dnvappmdm1:7007/MDMWebService/searchUpsertDelPartySOAP</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sear="http://mdm.mcafee.com/searchUpsertDelParty/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <sear:searchContactRequest>\r
+         <!--Optional:-->\r
+         <Search_Type>?</Search_Type>\r
+         <!--Optional:-->\r
+         <RecordCountThresold>?</RecordCountThresold>\r
+         <!--Optional:-->\r
+         <Match_score_thresold>?</Match_score_thresold>\r
+         <ContactSearchCriteria>\r
+            <FIRST_NAME>?</FIRST_NAME>\r
+            <LAST_NAME>?</LAST_NAME>\r
+            <EMAIL_ADDRESS>?</EMAIL_ADDRESS>\r
+            <ACCOUNT_NAME>?</ACCOUNT_NAME>\r
+         </ContactSearchCriteria>\r
+      </sear:searchContactRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mdm.mcafee.com/searchUpsertDelParty/searchContact"/></con:call></con:operation><con:operation id="a53252d2-3537-418f-b963-6c1dc40172f1" isOneWay="false" action="http://mdm.mcafee.com/searchUpsertDelParty/searchParty" name="searchParty" bindingOperationName="searchParty" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="92d335c4-143e-440d-ad49-ed8ba3646857" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://dnvappmdm1:7007/MDMWebService/searchUpsertDelPartySOAP</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sear="http://mdm.mcafee.com/searchUpsertDelParty/"> 
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sear:searchPartyRequest>
+         <!--Optional:-->
+         <RecordCountThresold></RecordCountThresold>
+         <!--Optional:-->
+         <Search_Type>Manual</Search_Type>
+         <!--Optional:-->
+         <Match_score_thresold>80</Match_score_thresold>
+         <!--Optional:-->
+         <ErrorMsg></ErrorMsg>
+         <PartySearchCriteria>
+            <PARTY_NAME>Securite Pty Ltd</PARTY_NAME>
+            <ADDR_LN1></ADDR_LN1>
+            <!--Optional:-->
+            <ADDR_LN2></ADDR_LN2>
+           <!--Optional:-->
+            <ADDR_LN3></ADDR_LN3>
+            <!--Optional:-->
+            <CITY></CITY>
+            <!--Optional:-->
+            <COUNTRY_CD>AU</COUNTRY_CD>
+            <!--Optional:-->
+            <STATE_CD></STATE_CD>
+            <!--Optional:-->
+            <POSTAL_CD></POSTAL_CD>
+            <!--Optional:-->
+            <UCN></UCN>
+            <!--Optional:-->
+            <CUST_GROUP></CUST_GROUP>
+           <!--Optional:-->
+           <PARTY_TYPE></PARTY_TYPE>
+            <SRC_SYSTEM></SRC_SYSTEM>
+         </PartySearchCriteria>
+      </sear:searchPartyRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mdm.mcafee.com/searchUpsertDelParty/searchParty"/><con:wsrmConfig version="1.2"/></con:call><con:call id="c98356dd-5207-47d1-95ba-105b58efa7c9" name="Request 2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://dnvappmdm4:7007/MDMWebService/searchUpsertDelPartySOAP</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sear="http://mdm.mcafee.com/searchUpsertDelParty/"> 
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sear:searchPartyRequest>
+         <!--Optional:-->
+         <RecordCountThresold></RecordCountThresold>
+         <!--Optional:-->
+         <Search_Type>Manual</Search_Type>
+         <!--Optional:-->
+         <Match_score_thresold>80</Match_score_thresold>
+         <!--Optional:-->
+         <ErrorMsg></ErrorMsg>
+         <PartySearchCriteria>
+            <PARTY_NAME>Banco Bicentenario Banco Universal C.A.</PARTY_NAME>
+            <ADDR_LN1>Av Venezuela Torre</ADDR_LN1>
+            <!--Optional:-->
+            <ADDR_LN2>Banco Bicentenario Piso Ph</ADDR_LN2>
+           <!--Optional:-->
+            <ADDR_LN3>Ofic Presidencia Urb El Rosal</ADDR_LN3>
+            <!--Optional:-->
+            <CITY>Caracas</CITY>
+            <!--Optional:-->
+            <COUNTRY_CD>VE</COUNTRY_CD>
+            <!--Optional:-->
+            <STATE_CD>Distrito Federal</STATE_CD>
+            <!--Optional:-->
+            <POSTAL_CD>1060</POSTAL_CD>
+            <!--Optional:-->
+            <UCN></UCN>
+            <!--Optional:-->
+            <CUST_GROUP></CUST_GROUP>
+           <!--Optional:-->
+           <PARTY_TYPE></PARTY_TYPE>
+            <SRC_SYSTEM/>
+         </PartySearchCriteria>
+      </sear:searchPartyRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mdm.mcafee.com/searchUpsertDelParty/searchParty"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="df3388f5-e76d-48af-8c2d-275f3943bbec" isOneWay="false" action="http://mdm.mcafee.com/searchUpsertDelParty/searchPartyHierarchy" name="searchPartyHierarchy" bindingOperationName="searchPartyHierarchy" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="38eed5da-d792-43ef-92d1-42087c38b90f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://dnvappmdm1:7007/MDMWebService/searchUpsertDelPartySOAP</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sear="http://mdm.mcafee.com/searchUpsertDelParty/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <sear:searchPartyHierarchyRequest>\r
+         <!--Optional:-->\r
+         <RecordCountThresold>?</RecordCountThresold>\r
+         <!--Optional:-->\r
+         <Search_Type>?</Search_Type>\r
+         <!--Optional:-->\r
+         <Match_score_thresold>?</Match_score_thresold>\r
+         <!--Optional:-->\r
+         <ErrorMsg>?</ErrorMsg>\r
+         <PartySearchCriteria>\r
+            <PARTY_NAME>?</PARTY_NAME>\r
+            <ADDR_LN1>?</ADDR_LN1>\r
+            <!--Optional:-->\r
+            <ADDR_LN2>?</ADDR_LN2>\r
+            <!--Optional:-->\r
+            <ADDR_LN3>?</ADDR_LN3>\r
+            <!--Optional:-->\r
+            <CITY>?</CITY>\r
+            <!--Optional:-->\r
+            <COUNTRY_CD>?</COUNTRY_CD>\r
+            <!--Optional:-->\r
+            <STATE_CD>?</STATE_CD>\r
+            <!--Optional:-->\r
+            <POSTAL_CD>?</POSTAL_CD>\r
+            <!--Optional:-->\r
+            <UCN>?</UCN>\r
+            <!--Optional:-->\r
+            <CUST_GROUP>?</CUST_GROUP>\r
+            <!--Optional:-->\r
+            <PARTY_TYPE>?</PARTY_TYPE>\r
+            <SRC_SYSTEM>?</SRC_SYSTEM>\r
+            <!--Optional:-->\r
+            <SRC_SYSTEM_ID>?</SRC_SYSTEM_ID>\r
+            <!--Optional:-->\r
+            <FIRST_NAME>?</FIRST_NAME>\r
+            <!--Optional:-->\r
+            <LAST_NAME>?</LAST_NAME>\r
+            <!--Optional:-->\r
+            <EMAIL_ADDRESS>?</EMAIL_ADDRESS>\r
+            <CONTACT_SOURCE_ID>?</CONTACT_SOURCE_ID>\r
+            <CONTACT_SOURCE_SYSTEM>?</CONTACT_SOURCE_SYSTEM>\r
+            <MDM_CONTACT_ID>?</MDM_CONTACT_ID>\r
+            <!--Optional:-->\r
+            <ACCOUNT_SOURCE_ID>?</ACCOUNT_SOURCE_ID>\r
+            <!--Optional:-->\r
+            <ACCOUNT_SOURCE_SYSTEM>?</ACCOUNT_SOURCE_SYSTEM>\r
+         </PartySearchCriteria>\r
+         <!--Optional:-->\r
+         <HierarchyType>?</HierarchyType>\r
+      </sear:searchPartyHierarchyRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mdm.mcafee.com/searchUpsertDelParty/searchPartyHierarchy"/></con:call></con:operation><con:operation id="5ae93979-0c34-4591-8ab7-7b2749f841ec" isOneWay="false" action="http://mdm.mcafee.com/searchUpsertDelParty/upsertParty" name="upsertParty" bindingOperationName="upsertParty" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="630a2dd9-f108-4daf-81a9-1f962f1a071c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://dnvappmdm1:7007/MDMWebService/searchUpsertDelPartySOAP</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sear="http://mdm.mcafee.com/searchUpsertDelParty/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <sear:upsertPartyRequest>\r
+         <ErrorMsg>?</ErrorMsg>\r
+         <!--1 or more repetitions:-->\r
+         <Party>\r
+            <ErrorMsg>?</ErrorMsg>\r
+            <LAST_UPDATE_DATE>?</LAST_UPDATE_DATE>\r
+            <SRC_CREATE_DT>?</SRC_CREATE_DT>\r
+            <UPDATE_BY>?</UPDATE_BY>\r
+            <ROWID_OBJECT>?</ROWID_OBJECT>\r
+            <ORIG_ROWID_OBJECT>?</ORIG_ROWID_OBJECT>\r
+            <BO_CLASS_CODE>?</BO_CLASS_CODE>\r
+            <PARTY_TYPE>?</PARTY_TYPE>\r
+            <PARTY_NAME>?</PARTY_NAME>\r
+            <GEO>?</GEO>\r
+            <REGION>?</REGION>\r
+            <STATUS_CD>?</STATUS_CD>\r
+            <VAT_REG_NBR>?</VAT_REG_NBR>\r
+            <TAX_JURSDCTN_CD>?</TAX_JURSDCTN_CD>\r
+            <SALES_BLOCK_CD>?</SALES_BLOCK_CD>\r
+            <UCN>?</UCN>\r
+            <LEGACY_UCN>?</LEGACY_UCN>\r
+            <ENGLISH_NAME>?</ENGLISH_NAME>\r
+            <DNB_DBA_NAME>?</DNB_DBA_NAME>\r
+            <DNB_SECOND_TRADE_STYLE>?</DNB_SECOND_TRADE_STYLE>\r
+            <DNB_REG_NAME>?</DNB_REG_NAME>\r
+            <MSG_TRKN_ID>?</MSG_TRKN_ID>\r
+            <PROCESS_STATE_IND>?</PROCESS_STATE_IND>\r
+            <PHYSICAL_GEO>?</PHYSICAL_GEO>\r
+            <PHYSICAL_REGION>?</PHYSICAL_REGION>\r
+            <PARTNERSHIP_STATUS>?</PARTNERSHIP_STATUS>\r
+            <DO_NOT_MERGE>?</DO_NOT_MERGE>\r
+            <!--1 or more repetitions:-->\r
+            <XREF>\r
+               <SRC_SYSTEM>?</SRC_SYSTEM>\r
+               <SRC_PKEY>?</SRC_PKEY>\r
+            </XREF>\r
+            <!--Zero or more repetitions:-->\r
+            <Account>\r
+               <SRC_SYSTEM>?</SRC_SYSTEM>\r
+               <SRC_PKEY>?</SRC_PKEY>\r
+               <LAST_UPDATE_DATE>?</LAST_UPDATE_DATE>\r
+               <UPDATE_BY>?</UPDATE_BY>\r
+               <ROWID_ACCOUNT>?</ROWID_ACCOUNT>\r
+               <ACCT_NAME>?</ACCT_NAME>\r
+               <ALIAS_NAME>?</ALIAS_NAME>\r
+               <ACCOUNT_REGION>?</ACCOUNT_REGION>\r
+               <ACCOUNT_GEO>?</ACCOUNT_GEO>\r
+               <MARKET>?</MARKET>\r
+               <ACCT_STATUS>?</ACCT_STATUS>\r
+               <ACCT_TYPE>?</ACCT_TYPE>\r
+               <CUST_GROUP>?</CUST_GROUP>\r
+               <PRICE_GROUP>?</PRICE_GROUP>\r
+               <COMPANY_CD>?</COMPANY_CD>\r
+               <ACCOUNT_VAT_REG_NBR>?</ACCOUNT_VAT_REG_NBR>\r
+               <TAX_TYPE>?</TAX_TYPE>\r
+               <ACCOUNT_TAX_JURSDCTN_CD>?</ACCOUNT_TAX_JURSDCTN_CD>\r
+               <BILL_BLOCK_CD>?</BILL_BLOCK_CD>\r
+               <ORDR_BLOCK_CD>?</ORDR_BLOCK_CD>\r
+               <DLVRY_BLOCK_CD>?</DLVRY_BLOCK_CD>\r
+               <POST_BLOCK_CD>?</POST_BLOCK_CD>\r
+               <SALE_BLOCK_CD>?</SALE_BLOCK_CD>\r
+               <CHANNEL_ID>?</CHANNEL_ID>\r
+               <PARTNER_TYPE>?</PARTNER_TYPE>\r
+               <VENDOR_NBR>?</VENDOR_NBR>\r
+               <DIRECT_IND>?</DIRECT_IND>\r
+               <NAMED_ACCT_IND>?</NAMED_ACCT_IND>\r
+               <NON_VAL_ACCT_IND>?</NON_VAL_ACCT_IND>\r
+               <PARTNER_IND>?</PARTNER_IND>\r
+               <SIEBEL_ROWID>?</SIEBEL_ROWID>\r
+               <SAP_CUST_NUMBER>?</SAP_CUST_NUMBER>\r
+               <MDM_LEGACY_ID>?</MDM_LEGACY_ID>\r
+               <DATA_SRC_SYSTEM>?</DATA_SRC_SYSTEM>\r
+               <SAP_NAME_1>?</SAP_NAME_1>\r
+               <SAP_NAME_2>?</SAP_NAME_2>\r
+               <SAP_NAME_3>?</SAP_NAME_3>\r
+               <SAP_NAME_4>?</SAP_NAME_4>\r
+               <Sales_Force_ID/>\r
+               <Draft_Account_Flag/>\r
+               <MDM_ACCOUNT_UCN>?</MDM_ACCOUNT_UCN>\r
+               <ACCOUNT_NAME>?</ACCOUNT_NAME>\r
+               <ACCOUNT_PARTY_TYPE>?</ACCOUNT_PARTY_TYPE>\r
+               <ACCOUNT_ADDRESS_1>?</ACCOUNT_ADDRESS_1>\r
+               <ACCOUNT_ADDRESS_2>?</ACCOUNT_ADDRESS_2>\r
+               <ACCOUNT_CITY>?</ACCOUNT_CITY>\r
+               <ACCOUNT_STATE>?</ACCOUNT_STATE>\r
+               <ACCOUNT_POSTAL_CODE>?</ACCOUNT_POSTAL_CODE>\r
+               <ACCOUNT_COUNTRY>?</ACCOUNT_COUNTRY>\r
+               <NAME_QUALITY_IDENTIFIER>?</NAME_QUALITY_IDENTIFIER>\r
+               <LOCAL_NAME>?</LOCAL_NAME>\r
+               <CURRENCY_CD>?</CURRENCY_CD>\r
+               <TAX_ID>?</TAX_ID>\r
+               <PRICE_BAND_AGGREMENT>?</PRICE_BAND_AGGREMENT>\r
+               <SITE_DESIGNATION>?</SITE_DESIGNATION>\r
+               <IS_DENIED_FLG>?</IS_DENIED_FLG>\r
+               <CLEANSE_IND>?</CLEANSE_IND>\r
+               <RESELL_LEVEL>?</RESELL_LEVEL>\r
+               <PARTNERSHIP_STATUS>?</PARTNERSHIP_STATUS>\r
+            </Account>\r
+            <!--Zero or more repetitions:-->\r
+            <Address>\r
+               <SRC_SYSTEM>?</SRC_SYSTEM>\r
+               <SRC_PKEY>?</SRC_PKEY>\r
+               <LAST_UPDATE_DATE>?</LAST_UPDATE_DATE>\r
+               <UPDATE_BY>?</UPDATE_BY>\r
+               <ROWID_ADDRESS>?</ROWID_ADDRESS>\r
+               <ROWID_ADDRESS_XREF>?</ROWID_ADDRESS_XREF>\r
+               <ADDR_LN1>?</ADDR_LN1>\r
+               <ADDR_LN2>?</ADDR_LN2>\r
+               <ADDR_LN3>?</ADDR_LN3>\r
+               <ADDR_LN4>?</ADDR_LN4>\r
+               <CITY>?</CITY>\r
+               <COUNTY>?</COUNTY>\r
+               <DISTRICT>?</DISTRICT>\r
+               <STATE_CD>?</STATE_CD>\r
+               <POSTAL_CD>?</POSTAL_CD>\r
+               <COUNTRY_CD>?</COUNTRY_CD>\r
+               <LANG_CD>?</LANG_CD>\r
+               <LONGITUDE>?</LONGITUDE>\r
+               <LATITUDE>?</LATITUDE>\r
+               <ADDR_TYPE>?</ADDR_TYPE>\r
+               <ADDR_STATUS>?</ADDR_STATUS>\r
+               <ADDR_MKTG_PREF>?</ADDR_MKTG_PREF>\r
+               <ADDRESS_QUALITY_IDENTIFIER>?</ADDRESS_QUALITY_IDENTIFIER>\r
+               <PARTNERSHIP_STATUS>?</PARTNERSHIP_STATUS>\r
+            </Address>\r
+            <!--Zero or more repetitions:-->\r
+            <Communication>\r
+               <SRC_SYSTEM>?</SRC_SYSTEM>\r
+               <SRC_PKEY>?</SRC_PKEY>\r
+               <LAST_UPDATE_DATE>?</LAST_UPDATE_DATE>\r
+               <UPDATE_BY>?</UPDATE_BY>\r
+               <ROWID_COMMUNICATION>?</ROWID_COMMUNICATION>\r
+               <COMM_TYPE>?</COMM_TYPE>\r
+               <COMM_VALUE>?</COMM_VALUE>\r
+               <COMM_STATUS>?</COMM_STATUS>\r
+               <COMM_EXTN>?</COMM_EXTN>\r
+               <COMM_MKTG_PREF>?</COMM_MKTG_PREF>\r
+               <PRFRD_COMM_IND>?</PRFRD_COMM_IND>\r
+               <WEB_DOMAIN>?</WEB_DOMAIN>\r
+               <COMM_SALES_PREF>?</COMM_SALES_PREF>\r
+            </Communication>\r
+            <!--Zero or more repetitions:-->\r
+            <Classification>\r
+               <SRC_SYSTEM>?</SRC_SYSTEM>\r
+               <SRC_PKEY>?</SRC_PKEY>\r
+               <LAST_UPDATE_DATE>?</LAST_UPDATE_DATE>\r
+               <UPDATE_BY>?</UPDATE_BY>\r
+               <ROWID_CLASSIFICTN>?</ROWID_CLASSIFICTN>\r
+               <CLASSIFICTN_TYPE>?</CLASSIFICTN_TYPE>\r
+               <CLASSIFICTN_VALUE>?</CLASSIFICTN_VALUE>\r
+               <CLASSIFICTN_METH>?</CLASSIFICTN_METH>\r
+               <START_DATE>?</START_DATE>\r
+               <END_DATE>?</END_DATE>\r
+            </Classification>\r
+            <!--Zero or more repetitions:-->\r
+            <PartyOrgExt>\r
+               <SRC_SYSTEM>?</SRC_SYSTEM>\r
+               <SRC_PKEY>?</SRC_PKEY>\r
+               <PARTY_SRC_SYS_KEY>?</PARTY_SRC_SYS_KEY>\r
+               <LAST_UPDATE_DATE>?</LAST_UPDATE_DATE>\r
+               <UPDATE_BY>?</UPDATE_BY>\r
+               <ROWID_ORG_EXTN>?</ROWID_ORG_EXTN>\r
+               <ORG_DUNS_NBR>?</ORG_DUNS_NBR>\r
+               <TRADE_NAME>?</TRADE_NAME>\r
+               <TRADE_NAME_2>?</TRADE_NAME_2>\r
+               <SITE_EMPL_CNT>?</SITE_EMPL_CNT>\r
+               <GLBL_EMPL_CNT>?</GLBL_EMPL_CNT>\r
+               <VERTICAL>?</VERTICAL>\r
+               <REVENUE>?</REVENUE>\r
+               <LINE_OF_BUS>?</LINE_OF_BUS>\r
+               <PRIM_SIC>?</PRIM_SIC>\r
+               <SEC_SIC>?</SEC_SIC>\r
+               <SALES_VOLUME>?</SALES_VOLUME>\r
+               <SALES_AMOUNT>?</SALES_AMOUNT>\r
+               <CURRENCY_CD>?</CURRENCY_CD>\r
+               <OUT_OF_BUS_IND>?</OUT_OF_BUS_IND>\r
+               <GLBL_ULT_IND>?</GLBL_ULT_IND>\r
+               <FORTUNE_INFO>?</FORTUNE_INFO>\r
+               <HIERARCHY_LEVEL>?</HIERARCHY_LEVEL>\r
+               <ORG_HQ_PARENT_DUNS>?</ORG_HQ_PARENT_DUNS>\r
+               <ORG_DOM_ULT_DUNS>?</ORG_DOM_ULT_DUNS>\r
+               <ORG_GLB_ULT_DUNS>?</ORG_GLB_ULT_DUNS>\r
+               <MFE_GLBL_PARENT_NM>?</MFE_GLBL_PARENT_NM>\r
+               <MFE_PARENT_NM>?</MFE_PARENT_NM>\r
+               <MFE_WW_PARENT_NM>?</MFE_WW_PARENT_NM>\r
+               <MFE_SUBSDRY_PARENT_NM>?</MFE_SUBSDRY_PARENT_NM>\r
+               <MFE_PRTNR_PARENT_ORG>?</MFE_PRTNR_PARENT_ORG>\r
+               <MFE_GLBL_PARENT_UCN>?</MFE_GLBL_PARENT_UCN>\r
+               <MFE_GLOBAL_PAR_NM_OVRIDE>?</MFE_GLOBAL_PAR_NM_OVRIDE>\r
+               <SALES_REVNU_OVRID>?</SALES_REVNU_OVRID>\r
+               <MFE_EMP_CNT_OVERIDE>?</MFE_EMP_CNT_OVERIDE>\r
+               <SIC_CD_OVRIDE>?</SIC_CD_OVRIDE>\r
+               <MFE_WW_PARENT_PRTN_NM>?</MFE_WW_PARENT_PRTN_NM>\r
+               <MFE_SUBSDRY_PARENT_PRTN_NM>?</MFE_SUBSDRY_PARENT_PRTN_NM>\r
+               <SIC_CD_OVRIDE_DESC>?</SIC_CD_OVRIDE_DESC>\r
+               <MFE_SUBS_PARENT_UCN>?</MFE_SUBS_PARENT_UCN>\r
+               <MFE_SUBS_PARENT_NM_OVRIDE>?</MFE_SUBS_PARENT_NM_OVRIDE>\r
+               <SUBSIDIARY_IND>?</SUBSIDIARY_IND>\r
+               <CUSTOM_PARENT_UCN>?</CUSTOM_PARENT_UCN>\r
+               <CUSTOM_PARENT_NAME>?</CUSTOM_PARENT_NAME>\r
+               <MFE_COUNTRY_ULT_UCN>?</MFE_COUNTRY_ULT_UCN>\r
+               <COUNTRY_ULT_IND>?</COUNTRY_ULT_IND>\r
+               <MFE_NEXT_LVL_SUBS_PAR_UCN>?</MFE_NEXT_LVL_SUBS_PAR_UCN>\r
+               <MFE_NEXT_LVL_SUBS_PAR_NM>?</MFE_NEXT_LVL_SUBS_PAR_NM>\r
+               <GLB_FLG>?</GLB_FLG>\r
+               <CUST_FLG>?</CUST_FLG>\r
+               <PARTNER_FLG>?</PARTNER_FLG>\r
+               <ACTIVE_TXN_FLG>?</ACTIVE_TXN_FLG>\r
+               <PARENT_FLG>?</PARENT_FLG>\r
+               <GLB_EMP_CNT_OVERRIDE>?</GLB_EMP_CNT_OVERRIDE>\r
+               <TXN_5_YR_FLG>?</TXN_5_YR_FLG>\r
+               <TXN_7_YR_FLG>?</TXN_7_YR_FLG>\r
+               <MFE_TXN_5_YR_FLG>?</MFE_TXN_5_YR_FLG>\r
+               <MFE_TXN_7_YR_FLG>?</MFE_TXN_7_YR_FLG>\r
+               <G2K_FLG>?</G2K_FLG>\r
+               <MDM_PARENT_UCN>?</MDM_PARENT_UCN>\r
+               <CUSTOMER_PARENT_FLAG>?</CUSTOMER_PARENT_FLAG>\r
+               <GLB_SALES_REVNU_OVRID>?</GLB_SALES_REVNU_OVRID>\r
+               <PTR_PARENT_UCN>?</PTR_PARENT_UCN>\r
+               <PTR_PARENT_NM>?</PTR_PARENT_NM>\r
+               <PTR_GLBL_PARENT_UCN>?</PTR_GLBL_PARENT_UCN>\r
+            </PartyOrgExt>\r
+            <!--Zero or more repetitions:-->\r
+            <PartyPersonExt>\r
+               <SRC_SYSTEM>?</SRC_SYSTEM>\r
+               <SRC_PKEY>?</SRC_PKEY>\r
+               <LAST_UPDATE_DATE>?</LAST_UPDATE_DATE>\r
+               <UPDATE_BY>?</UPDATE_BY>\r
+               <ROWID_PRSN_EXTN>?</ROWID_PRSN_EXTN>\r
+               <PREFIX>?</PREFIX>\r
+               <FIRST_NAME>?</FIRST_NAME>\r
+               <MIDDLE_NAME>?</MIDDLE_NAME>\r
+               <LAST_NAME>?</LAST_NAME>\r
+               <SUFFIX>?</SUFFIX>\r
+               <PERSON_TYPE>?</PERSON_TYPE>\r
+            </PartyPersonExt>\r
+            <!--Zero or more repetitions:-->\r
+            <PartyPerson>\r
+               <ErrorMsg>?</ErrorMsg>\r
+               <SRC_SYSTEM>?</SRC_SYSTEM>\r
+               <SRC_PKEY>?</SRC_PKEY>\r
+               <LAST_UPDATE_DATE>?</LAST_UPDATE_DATE>\r
+               <SRC_CREATE_DT>?</SRC_CREATE_DT>\r
+               <UPDATE_BY>?</UPDATE_BY>\r
+               <ROWID_OBJECT>?</ROWID_OBJECT>\r
+               <ORIG_ROWID_OBJECT>?</ORIG_ROWID_OBJECT>\r
+               <PREFIX>?</PREFIX>\r
+               <FIRST_NAME>?</FIRST_NAME>\r
+               <MIDDLE_NAME>?</MIDDLE_NAME>\r
+               <LAST_NAME>?</LAST_NAME>\r
+               <SUFFIX>?</SUFFIX>\r
+               <JOB_TITLE>?</JOB_TITLE>\r
+               <JOB_LEVEL>?</JOB_LEVEL>\r
+               <JOB_FUNCTION>?</JOB_FUNCTION>\r
+               <PREF_LANGUAGE>?</PREF_LANGUAGE>\r
+               <PERSON_STATUS>?</PERSON_STATUS>\r
+               <PERSON_TYPE>?</PERSON_TYPE>\r
+               <LIST_SOURCE>?</LIST_SOURCE>\r
+               <DATA_SOURCE_SYSTEM>?</DATA_SOURCE_SYSTEM>\r
+               <LATTICE_SCORE>?</LATTICE_SCORE>\r
+               <REPORTED_COMPANY_NAME>?</REPORTED_COMPANY_NAME>\r
+               <Sales_Force_ID>?</Sales_Force_ID>\r
+               <SRC_ACCOUNT_ID>?</SRC_ACCOUNT_ID>\r
+               <JOB_ROLE>?</JOB_ROLE>\r
+               <PARTNER_CONTACT_FLG>?</PARTNER_CONTACT_FLG>\r
+               <SRC_ACCOUNT_NAME>?</SRC_ACCOUNT_NAME>\r
+               <CLEANSE_IND>?</CLEANSE_IND>\r
+            </PartyPerson>\r
+            <!--Optional:-->\r
+            <PartyRel>\r
+               <!--Zero or more repetitions:-->\r
+               <PARTY_PERSON_REL>\r
+                  <SRC_SYSTEM>?</SRC_SYSTEM>\r
+                  <SRC_PKEY>?</SRC_PKEY>\r
+                  <LAST_UPDATE_DATE>?</LAST_UPDATE_DATE>\r
+                  <UPDATE_BY>?</UPDATE_BY>\r
+                  <PARENT_ID>?</PARENT_ID>\r
+                  <!--Zero or more repetitions:-->\r
+                  <CHILD_ID>?</CHILD_ID>\r
+                  <HIERARCHY_TYPE>?</HIERARCHY_TYPE>\r
+                  <REL_TYPE>?</REL_TYPE>\r
+               </PARTY_PERSON_REL>\r
+               <!--Zero or more repetitions:-->\r
+               <PARTY_ACCOUNT_REL>\r
+                  <SRC_SYSTEM>?</SRC_SYSTEM>\r
+                  <SRC_PKEY>?</SRC_PKEY>\r
+                  <LAST_UPDATE_DATE>?</LAST_UPDATE_DATE>\r
+                  <UPDATE_BY>?</UPDATE_BY>\r
+                  <MDM_PARENT_UCN>?</MDM_PARENT_UCN>\r
+                  <MDM_PARENT_NAME>?</MDM_PARENT_NAME>\r
+                  <MDM_GLB_PARENT_UCN>?</MDM_GLB_PARENT_UCN>\r
+                  <MDM_GLB_PARENT_NAME>?</MDM_GLB_PARENT_NAME>\r
+                  <HIERARCHY_TYPE>?</HIERARCHY_TYPE>\r
+                  <REL_TYPE>?</REL_TYPE>\r
+                  <SINGLE_SITE_FLAG>?</SINGLE_SITE_FLAG>\r
+               </PARTY_ACCOUNT_REL>\r
+            </PartyRel>\r
+         </Party>\r
+      </sear:upsertPartyRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mdm.mcafee.com/searchUpsertDelParty/upsertParty"/></con:call></con:operation><con:operation id="30d4462c-6ac1-4a22-a1eb-588d383e506b" isOneWay="false" action="http://mdm.mcafee.com/searchUpsertDelParty/upsertPartyGroup" name="upsertPartyGroup" bindingOperationName="upsertPartyGroup" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ee84abd5-5872-4975-a796-ffb57df4a9ca" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://dnvappmdm1:7007/MDMWebService/searchUpsertDelPartySOAP</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sear="http://mdm.mcafee.com/searchUpsertDelParty/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <sear:upsertPartyGroupRequest>\r
+         <ErrorMsg>?</ErrorMsg>\r
+         <!--1 or more repetitions:-->\r
+         <PartyGroupType>\r
+            <SRC_SYSTEM>?</SRC_SYSTEM>\r
+            <SRC_PKEY>?</SRC_PKEY>\r
+            <LAST_UPDATE_DATE>?</LAST_UPDATE_DATE>\r
+            <UPDATED_BY>?</UPDATED_BY>\r
+            <PARTY_GROUP_NAME>?</PARTY_GROUP_NAME>\r
+            <ENTITY_TYPE>?</ENTITY_TYPE>\r
+            <ENTITY_TYPE_DESC>?</ENTITY_TYPE_DESC>\r
+            <LEVEL_1>?</LEVEL_1>\r
+            <GLBL_PAR_NAME>?</GLBL_PAR_NAME>\r
+            <GLBL_PAR_NUMBER>?</GLBL_PAR_NUMBER>\r
+            <GLBL_PAR_METHOD>?</GLBL_PAR_METHOD>\r
+            <GLBL_PAR_NAME_OVRIDE>?</GLBL_PAR_NAME_OVRIDE>\r
+            <GLBL_PAR_NAME_OVRIDE_METH>?</GLBL_PAR_NAME_OVRIDE_METH>\r
+            <UCN>?</UCN>\r
+            <GLB_EMP_CNT_OVERRIDE>?</GLB_EMP_CNT_OVERRIDE>\r
+            <GLB_EMP_CNT_OVERIDE_METH>?</GLB_EMP_CNT_OVERIDE_METH>\r
+            <G2K_FLG>?</G2K_FLG>\r
+            <GLB_VERTICAL>?</GLB_VERTICAL>\r
+            <GLB_VERTICAL_OVERRIDE>?</GLB_VERTICAL_OVERRIDE>\r
+            <GLB_VERTICAL_OVERRIDE_METH>?</GLB_VERTICAL_OVERRIDE_METH>\r
+            <GLB_SALES_REVNU>?</GLB_SALES_REVNU>\r
+            <GLB_SALES_REVNU_OVRID>?</GLB_SALES_REVNU_OVRID>\r
+            <GLB_SALES_REVNU_OVRID_METH>?</GLB_SALES_REVNU_OVRID_METH>\r
+         </PartyGroupType>\r
+      </sear:upsertPartyGroupRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mdm.mcafee.com/searchUpsertDelParty/upsertPartyGroup"/></con:call></con:operation><con:operation id="f6df5b7d-e7d9-4f96-884d-4db3d806e984" isOneWay="false" action="http://mdm.mcafee.com/searchUpsertDelParty/upsertPartyOrgExtn" name="upsertPartyOrgExtn" bindingOperationName="upsertPartyOrgExtn" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="56ff99ff-6f08-4d56-9fea-9b552f07700b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://dnvappmdm1:7007/MDMWebService/searchUpsertDelPartySOAP</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sear="http://mdm.mcafee.com/searchUpsertDelParty/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <sear:upsertPartyOrgExtnRequest>\r
+         <ErrorMsg>?</ErrorMsg>\r
+         <!--1 or more repetitions:-->\r
+         <PartyOrgExt>\r
+            <SRC_SYSTEM>?</SRC_SYSTEM>\r
+            <SRC_PKEY>?</SRC_PKEY>\r
+            <PARTY_SRC_SYS_KEY>?</PARTY_SRC_SYS_KEY>\r
+            <LAST_UPDATE_DATE>?</LAST_UPDATE_DATE>\r
+            <UPDATE_BY>?</UPDATE_BY>\r
+            <ROWID_ORG_EXTN>?</ROWID_ORG_EXTN>\r
+            <ORG_DUNS_NBR>?</ORG_DUNS_NBR>\r
+            <TRADE_NAME>?</TRADE_NAME>\r
+            <TRADE_NAME_2>?</TRADE_NAME_2>\r
+            <SITE_EMPL_CNT>?</SITE_EMPL_CNT>\r
+            <GLBL_EMPL_CNT>?</GLBL_EMPL_CNT>\r
+            <VERTICAL>?</VERTICAL>\r
+            <REVENUE>?</REVENUE>\r
+            <LINE_OF_BUS>?</LINE_OF_BUS>\r
+            <PRIM_SIC>?</PRIM_SIC>\r
+            <SEC_SIC>?</SEC_SIC>\r
+            <SALES_VOLUME>?</SALES_VOLUME>\r
+            <SALES_AMOUNT>?</SALES_AMOUNT>\r
+            <CURRENCY_CD>?</CURRENCY_CD>\r
+            <OUT_OF_BUS_IND>?</OUT_OF_BUS_IND>\r
+            <GLBL_ULT_IND>?</GLBL_ULT_IND>\r
+            <FORTUNE_INFO>?</FORTUNE_INFO>\r
+            <HIERARCHY_LEVEL>?</HIERARCHY_LEVEL>\r
+            <ORG_HQ_PARENT_DUNS>?</ORG_HQ_PARENT_DUNS>\r
+            <ORG_DOM_ULT_DUNS>?</ORG_DOM_ULT_DUNS>\r
+            <ORG_GLB_ULT_DUNS>?</ORG_GLB_ULT_DUNS>\r
+            <MFE_GLBL_PARENT_NM>?</MFE_GLBL_PARENT_NM>\r
+            <MFE_PARENT_NM>?</MFE_PARENT_NM>\r
+            <MFE_WW_PARENT_NM>?</MFE_WW_PARENT_NM>\r
+            <MFE_SUBSDRY_PARENT_NM>?</MFE_SUBSDRY_PARENT_NM>\r
+            <MFE_PRTNR_PARENT_ORG>?</MFE_PRTNR_PARENT_ORG>\r
+            <MFE_GLBL_PARENT_UCN>?</MFE_GLBL_PARENT_UCN>\r
+            <MFE_GLOBAL_PAR_NM_OVRIDE>?</MFE_GLOBAL_PAR_NM_OVRIDE>\r
+            <SALES_REVNU_OVRID>?</SALES_REVNU_OVRID>\r
+            <MFE_EMP_CNT_OVERIDE>?</MFE_EMP_CNT_OVERIDE>\r
+            <SIC_CD_OVRIDE>?</SIC_CD_OVRIDE>\r
+            <MFE_WW_PARENT_PRTN_NM>?</MFE_WW_PARENT_PRTN_NM>\r
+            <MFE_SUBSDRY_PARENT_PRTN_NM>?</MFE_SUBSDRY_PARENT_PRTN_NM>\r
+            <SIC_CD_OVRIDE_DESC>?</SIC_CD_OVRIDE_DESC>\r
+            <MFE_SUBS_PARENT_UCN>?</MFE_SUBS_PARENT_UCN>\r
+            <MFE_SUBS_PARENT_NM_OVRIDE>?</MFE_SUBS_PARENT_NM_OVRIDE>\r
+            <SUBSIDIARY_IND>?</SUBSIDIARY_IND>\r
+            <CUSTOM_PARENT_UCN>?</CUSTOM_PARENT_UCN>\r
+            <CUSTOM_PARENT_NAME>?</CUSTOM_PARENT_NAME>\r
+            <MFE_COUNTRY_ULT_UCN>?</MFE_COUNTRY_ULT_UCN>\r
+            <COUNTRY_ULT_IND>?</COUNTRY_ULT_IND>\r
+            <MFE_NEXT_LVL_SUBS_PAR_UCN>?</MFE_NEXT_LVL_SUBS_PAR_UCN>\r
+            <MFE_NEXT_LVL_SUBS_PAR_NM>?</MFE_NEXT_LVL_SUBS_PAR_NM>\r
+            <GLB_FLG>?</GLB_FLG>\r
+            <CUST_FLG>?</CUST_FLG>\r
+            <PARTNER_FLG>?</PARTNER_FLG>\r
+            <ACTIVE_TXN_FLG>?</ACTIVE_TXN_FLG>\r
+            <PARENT_FLG>?</PARENT_FLG>\r
+            <GLB_EMP_CNT_OVERRIDE>?</GLB_EMP_CNT_OVERRIDE>\r
+            <TXN_5_YR_FLG>?</TXN_5_YR_FLG>\r
+            <TXN_7_YR_FLG>?</TXN_7_YR_FLG>\r
+            <MFE_TXN_5_YR_FLG>?</MFE_TXN_5_YR_FLG>\r
+            <MFE_TXN_7_YR_FLG>?</MFE_TXN_7_YR_FLG>\r
+            <G2K_FLG>?</G2K_FLG>\r
+            <MDM_PARENT_UCN>?</MDM_PARENT_UCN>\r
+            <CUSTOMER_PARENT_FLAG>?</CUSTOMER_PARENT_FLAG>\r
+            <GLB_SALES_REVNU_OVRID>?</GLB_SALES_REVNU_OVRID>\r
+            <PTR_PARENT_UCN>?</PTR_PARENT_UCN>\r
+            <PTR_PARENT_NM>?</PTR_PARENT_NM>\r
+            <PTR_GLBL_PARENT_UCN>?</PTR_GLBL_PARENT_UCN>\r
+         </PartyOrgExt>\r
+      </sear:upsertPartyOrgExtnRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mdm.mcafee.com/searchUpsertDelParty/upsertPartyOrgExtn"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>
